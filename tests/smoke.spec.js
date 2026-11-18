@@ -81,6 +81,9 @@ test('M0.02 and S1.04 transcript lessons render source material', async ({ page 
   await expect(page.locator('h1')).toContainText('Un milliard de secondes');
   await page.goto('/lessons/S1-04/');
   await expect(page.locator('h1')).toContainText('Combien de chômeurs');
+  await page.goto('/en/lessons/M0-02/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('h1')).toContainText('How long is a billion seconds');
 });
 
 test('English routes open the English edition', async ({ page }) => {
