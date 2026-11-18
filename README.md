@@ -29,7 +29,7 @@ Les statuts sont volontairement distincts :
 - **Script source disponible** : un script existe dans le dépôt de référence, mais n'est pas automatiquement une page web publiée ici.
 - **Au programme** : l'unité figure dans le syllabus, mais sa page et son script ne sont pas encore intégrés.
 
-Le catalogue recense actuellement 30 scripts sources pour les unités du programme. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
+Le catalogue recense actuellement 30 scripts sources pour les unités du programme ; quatre de ces scripts disposent désormais de pages web bilingues dans le laboratoire, les autres restent des ressources sources. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
 
 ## Rapport au dépôt source
 
@@ -50,7 +50,8 @@ Le workflow `.github/workflows/quality.yml` s'exécute sur les pull requests. Le
 - chemins et fragments des liens locaux ;
 - structure et unicité des 320 unités du catalogue ;
 - présence des pages bilingues A0.01, A1.01 et A2.01 ;
-- recalculs des principaux exemples actuariels et financiers, dont les probabilités binomiales du pilote A2.01.
+- recalculs des principaux exemples actuariels et financiers, dont les probabilités binomiales du pilote A2.01 ;
+- tests Playwright sous Chromium pour la navigation, les filtres du catalogue, les calculateurs A1.01/M0.01, le simulateur A2.01, l'exercice S1.01, la route anglaise et l'affichage mobile.
 
 Les tests Playwright exécutent aussi les pages dans Chromium : navigation, chargement et filtres du catalogue, calculateur A1.01, simulateur binomial A2.01, route anglaise et débordement horizontal sur mobile.\n\nCes contrôles automatisés ne remplacent pas une revue visuelle multi-navigateurs, une validation manuelle approfondie au clavier ou une validation scientifique humaine.
 
