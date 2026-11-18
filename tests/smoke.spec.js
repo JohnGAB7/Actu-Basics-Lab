@@ -11,14 +11,21 @@ test('homepage exposes the three published actuarial lessons', async ({ page }) 
   await expect(page.locator('a.lesson[href="lessons/A0-01/"]')).toBeVisible();
   await expect(page.locator('a.lesson[href="lessons/A1-01/"]')).toBeVisible();
   await expect(page.locator('a.lesson[href="lessons/A2-01/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-01/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-02/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-03/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/M0-01/"]')).toBeVisible();
 });
 
 test('library loads the 320-unit source curriculum and filters it', async ({ page }) => {
   await page.goto('/bibliotheque/');
   await expect(page.locator('#count')).toContainText('320 / 320');
+  await page.locator('#status').selectOption('available');
+  await expect(page.locator('#catalogue .card')).toHaveCount(4);
+  await expect(page.locator('#catalogue')).toContainText('S1.01');
   await page.locator('#search').fill('S1.01');
   await expect(page.locator('#catalogue .card')).toHaveCount(1);
-  await expect(page.locator('#catalogue')).toContainText('S1.01');
+  await expect(page.locator('#catalogue a')).toHaveAttribute('href', '../lessons/S1-01/');
 });
 
 test('A1.01 calculator recalculates future and present values', async ({ page }) => {
@@ -41,6 +48,20 @@ test('A2.01 risk-pooling simulator returns the validated binomial examples', asy
   await expect.poll(async () => numeric(await page.locator('#loss').innerText())).toBeCloseTo(32.33, 1);
 });
 
+test('M0.01 percentage calculator updates from a fraction', async ({ page }) => {
+  await page.goto('/lessons/M0-01/');
+  await expect(page.locator('#pct')).toContainText('25');
+  await page.locator('#num').fill('6');
+  await page.locator('#den').fill('40');
+  await expect(page.locator('#pct')).toContainText('15');
+});
+
+test('S1.01 exercise gives immediate corrective feedback', async ({ page }) => {
+  await page.goto('/lessons/S1-01/');
+  await page.locator('.answer[data-correct="yes"]').click();
+  await expect(page.locator('.feedback')).toContainText('Exact');
+});
+
 test('English routes open the English edition', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
@@ -49,7 +70,7 @@ test('English routes open the English edition', async ({ page }) => {
 
 test('lesson pages remain within the mobile viewport', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  for (const route of ['/lessons/A0-01/', '/lessons/A1-01/', '/lessons/A2-01/', '/bibliotheque/']) {
+  for (const route of ['/lessons/A0-01/', '/lessons/A1-01/', '/lessons/A2-01/', '/lessons/M0-01/', '/lessons/S1-01/', '/lessons/S1-02/', '/lessons/S1-03/', '/bibliotheque/']) {
     await page.goto(route);
     await expect(page.locator('h1, .hero h1').first()).toBeVisible();
     const width = await page.evaluate(() => document.documentElement.scrollWidth);
