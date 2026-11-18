@@ -34,3 +34,28 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  verify:
+    name: Verify deployed site in Chromium
+    runs-on: ubuntu-latest
+    needs: deploy
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium headless shell
+        run: npx playwright install --only-shell chromium
+      - name: Wait for GitHub Pages to serve the new release
+        run: curl --retry 12 --retry-delay 5 --retry-all-errors --fail --silent --show-error "$BASE_URL" >/dev/null
+        env:
+          BASE_URL: https://johngab7.github.io/Actu-Basics-Lab/
+      - name: Run browser checks against the public site
+        run: npm test
+        env:
+          BASE_URL: https://johngab7.github.io/Actu-Basics-Lab/
