@@ -129,7 +129,7 @@ else:
         fail(f"Catalogue JSON validation failed: {exc}")
 
 required = [
-    "index.html", "bibliotheque/index.html", "en/library/index.html",
+    "index.html", "en/index.html", "bibliotheque/index.html", "en/library/index.html",
     "parcours/index.html", "en/paths/index.html", "a-propos/index.html",
     "en/about/index.html", "lessons/A0-01/index.html", "en/lessons/A0-01/index.html",
     "lessons/A1-01/index.html", "en/lessons/A1-01/index.html",
@@ -138,6 +138,20 @@ required = [
 for item in required:
     if not (ROOT / item).exists():
         fail(f"Missing required product page: {item}")
+
+# The English root is a deliberate route into the translated homepage.
+en_root = ROOT / "en/index.html"
+if en_root.exists() and "location.replace('../index.html?lang=en" not in en_root.read_text(encoding="utf-8"):
+    fail("English homepage route must open the translated homepage")
+
+for lesson in ("lessons/A1-01/index.html", "en/lessons/A1-01/index.html"):
+    source = (ROOT / lesson).read_text(encoding="utf-8")
+    if 'id="present"' not in source or "Math.pow(1+r,n)" not in source:
+        fail(f"{lesson}: missing interactive present-value calculation")
+for lesson in ("lessons/A2-01/index.html", "en/lessons/A2-01/index.html"):
+    source = (ROOT / lesson).read_text(encoding="utf-8")
+    if "function tail(n,p,k)" not in source or "Math.sqrt(n*p*(1-p))" not in source:
+        fail(f"{lesson}: missing binomial risk-pooling calculations")
 
 # Recalculate the key examples from the source pilot scripts.
 checks = {
