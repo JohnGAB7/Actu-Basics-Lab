@@ -29,7 +29,7 @@ Les statuts sont volontairement distincts :
 - **Script source disponible** : un script existe dans le dépôt de référence, mais n'est pas automatiquement une page web publiée ici.
 - **Au programme** : l'unité figure dans le syllabus, mais sa page et son script ne sont pas encore intégrés.
 
-Le catalogue recense actuellement 30 scripts sources pour les unités du programme ; quatre de ces scripts disposent désormais de pages web bilingues dans le laboratoire, les autres restent des ressources sources. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
+Le catalogue recense actuellement 30 scripts sources pour les unités du programme ; dix de ces scripts disposent désormais de pages web bilingues dans le laboratoire, les autres restent des ressources sources. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
 
 ## Rapport au dépôt source
 
