@@ -125,8 +125,8 @@ else:
                 fail(f"Invalid status on {entry.get('id')}: {entry.get('status')}")
         if sum(bool(e.get("scriptPath")) for e in entries) != 30:
             fail("Expected 30 source-script references in the curriculum catalogue")
-        if sum(e["status"] == "available" for e in entries) != 4:
-            fail("Expected four published curriculum lessons in the catalogue")
+        if sum(e["status"] == "available" for e in entries) != 10:
+            fail("Expected ten published curriculum lessons in the catalogue")
     except Exception as exc:
         fail(f"Catalogue JSON validation failed: {exc}")
 
@@ -140,6 +140,12 @@ required = [
     "lessons/S1-01/index.html", "en/lessons/S1-01/index.html",
     "lessons/S1-02/index.html", "en/lessons/S1-02/index.html",
     "lessons/S1-03/index.html", "en/lessons/S1-03/index.html",
+    "lessons/M0-02/index.html", "en/lessons/M0-02/index.html",
+    "lessons/M0-03/index.html", "en/lessons/M0-03/index.html",
+    "lessons/S1-04/index.html", "en/lessons/S1-04/index.html",
+    "lessons/S1-05/index.html", "en/lessons/S1-05/index.html",
+    "lessons/S1-06/index.html", "en/lessons/S1-06/index.html",
+    "lessons/S1-07/index.html", "en/lessons/S1-07/index.html",
 ]
 for item in required:
     if not (ROOT / item).exists():
