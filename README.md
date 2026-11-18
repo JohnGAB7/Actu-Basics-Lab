@@ -7,29 +7,32 @@ Le dépôt source `JohnGAB7/Actu-Basics` reste la référence pédagogique et é
 ## Direction de conception
 
 - Direction visuelle : ivoire, turquoise profond et or doux.
-- Typographie : titres serif et interface sans-serif lisible.
+- Titres serif, interface sans-serif, mise en page responsive.
 - Signature FR : « Éveiller par les chiffres. » ; EN : « Enlightening through numbers. »
-- Expérience : navigation responsive, éditions FR/EN, thèmes clair/sombre, recherche et filtres.
-- Méthode : question → intuition → formalisation → pratique.
+- Éditions FR/EN, thèmes clair/sombre, recherche et filtres.
+- Méthode pédagogique : question → intuition → formalisation → pratique.
 
-## Parcours et pages web intégrées
+## Produit actuel
 
-- Statistiques, probabilités et économétrie : catalogue issu du programme de référence (320 unités).
-- Mathématiques financières : A1.01, intérêts composés et actualisation.
-- Sciences actuarielles : A0.01, introduction et prime pure ; A2.01, mutualisation des risques.
-- Les trois leçons actuarielles A0.01, A1.01 et A2.01 disposent de pages FR/EN dans le laboratoire.
-- Les pages A1.01 et A2.01 intègrent des calculateurs interactifs.
+Treize leçons disposent de pages web bilingues :
+- **Fondations mathématiques** : M0.01 à M0.03 — fractions, pourcentages, ordres de grandeur et lecture de graphiques.
+- **Statistiques** : S1.01 à S1.07 — données, population, unités, variables, sources, biais de sélection, randomisation et interprétation.
+- **Pilotes actuariels** : A0.01 — introduction et prime pure ; A1.01 — intérêts composés et actualisation ; A2.01 — mutualisation des risques.
+
+Les pages A1.01, A2.01 et M0.01 intègrent des calculateurs ou simulateurs interactifs. Les pages M0.02, M0.03 et S1.04 à S1.07 présentent les séquences et narrations des scripts source, avec révélation interactive des corrections.
 
 ## Catalogue pédagogique et statuts
 
-`data/catalogue.json` est extrait des sept fichiers de catalogue du programme de référence. Il contient 320 unités avec titres, questions, modules, niveaux, durées indicatives, prérequis et références de provenance.
+`data/catalogue.json` est extrait des sept fichiers de catalogue du programme de référence. Il contient **320 unités** avec titres, questions, modules, niveaux, durées indicatives, prérequis et références de provenance.
 
-Les statuts sont volontairement distincts :
-- **Leçon disponible** : une page web complète existe dans le laboratoire.
-- **Script source disponible** : un script existe dans le dépôt de référence, mais n'est pas automatiquement une page web publiée ici.
-- **Au programme** : l'unité figure dans le syllabus, mais sa page et son script ne sont pas encore intégrés.
+Au dernier état validé :
+- **10 unités du catalogue** disposent d'une page web bilingue (M0.01–M0.03 et S1.01–S1.07) ;
+- **20 unités** disposent d'un script source référencé, mais pas encore d'une page web dans le laboratoire ;
+- **290 unités** restent au programme sans script ou page intégrés ;
+- **30 scripts sources** sont référencés dans le catalogue.
+- Trois pilotes actuariels supplémentaires (A0.01, A1.01 et A2.01) sont publiés hors de ces 320 unités.
 
-Le catalogue recense actuellement 30 scripts sources pour les unités du programme ; dix de ces scripts disposent désormais de pages web bilingues dans le laboratoire, les autres restent des ressources sources. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
+Les statuts sont distincts : page disponible, script source disponible, ou unité au programme. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents et ne doivent pas être confondus.
 
 ## Rapport au dépôt source
 
@@ -40,31 +43,24 @@ Ce laboratoire doit être un perfectionnement, pas un fork aveugle ni une rééc
 - exemples, exercices, corrections et limites ;
 - états de validation éditoriale.
 
-Les leçons A1.01 et A2.01 sont adaptées des scripts FR/EN validés par le propriétaire du projet dans le dépôt source. Les montants sont présentés en euros dans les deux éditions du laboratoire pour garder une lecture homogène. Les hypothèses simplificatrices des modèles sont explicites.
+Les leçons A1.01 et A2.01 sont adaptées des scripts FR/EN validés par le propriétaire du projet. Les pages M0.01–M0.03 et S1.01–S1.07 sont adaptées de scripts marqués validés par JG le 8 novembre 2026. Les autres scripts ne sont pas automatiquement publiés : leur statut de validation est respecté.
 
 ## Qualité
 
-Le workflow `.github/workflows/quality.yml` s'exécute sur les pull requests. Le script `scripts/validate_site.py` contrôle :
-- structure HTML minimale, langue, titre et viewport ;
-- identifiants HTML uniques et attributs `alt` ;
-- chemins et fragments des liens locaux ;
-- structure et unicité des 320 unités du catalogue ;
-- présence des pages bilingues A0.01, A1.01 et A2.01 ;
-- recalculs des principaux exemples actuariels et financiers, dont les probabilités binomiales du pilote A2.01 ;
-- tests Playwright sous Chromium pour la navigation, les filtres du catalogue, les calculateurs A1.01/M0.01, le simulateur A2.01, l'exercice S1.01, la route anglaise et l'affichage mobile.
+Deux workflows GitHub Actions contrôlent le produit :
 
-Les tests Playwright exécutent aussi les pages dans Chromium : navigation, chargement et filtres du catalogue, calculateur A1.01, simulateur binomial A2.01, route anglaise et débordement horizontal sur mobile.\n\nCes contrôles automatisés ne remplacent pas une revue visuelle multi-navigateurs, une validation manuelle approfondie au clavier ou une validation scientifique humaine.
+- `.github/workflows/quality.yml` : structure HTML, titres, langue, viewport, identifiants, attributs `alt`, liens et fragments locaux, catalogue JSON, existence des routes publiées et recalculs mathématiques.
+- `.github/workflows/browser.yml` : tests Playwright sous Chromium pour la navigation, le catalogue et ses filtres, les calculateurs A1.01/M0.01, le simulateur binomial A2.01, les exercices S1.01/S1.05, les routes anglaises et l'affichage mobile.
+
+Ces contrôles automatisés ne remplacent pas une revue visuelle multi-navigateurs, une validation manuelle approfondie au clavier ou une validation scientifique humaine.
 
 ## Publication et gouvernance
 
-- Le dépôt source n'est pas modifié par ce laboratoire.
-- La branche de travail est `chatgpt/premium-editorial-v1`.
-- La PR #1 est maintenue ouverte jusqu'à réussite des contrôles et vérifications visuelles.
-- Aucune fusion vers le dépôt source n'est prévue.
-- Aucun déploiement public n'est annoncé tant que le workflow Pages n'a pas publié cette version avec succès.
-- GitHub Pages doit utiliser **GitHub Actions** comme source dans les paramètres du dépôt.
-
-## Dépôts
-
 - Laboratoire : https://github.com/JohnGAB7/Actu-Basics-Lab
-- Référence : https://github.com/JohnGAB7/Actu-Basics
+- Dépôt de référence : https://github.com/JohnGAB7/Actu-Basics
+- Site GitHub Pages : https://johngab7.github.io/Actu-Basics-Lab/
+- PR #1 fusionnée dans `master` (squash merge).
+- Les ajouts ultérieurs sont effectués directement dans le dépôt laboratoire et déployés par `.github/workflows/pages.yml`.
+- Le dernier commit doit toujours être vérifié dans les Actions avant de considérer la dernière version comme publiée.
+- Le dépôt source n'a pas été modifié par le laboratoire.
+- Les logos officiels et une revue visuelle fondée sur le lien de prévisualisation Blink restent à intégrer ; aucun logo n'est recréé artificiellement.
