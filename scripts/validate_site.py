@@ -123,6 +123,12 @@ else:
                     fail(f"Catalogue entry {entry.get('id', '?')} missing {field}")
             if entry.get("status") not in {"available", "script", "planned"}:
                 fail(f"Invalid status on {entry.get('id')}: {entry.get('status')}")
+            if entry.get("status") == "available" and not entry.get("pagePath"):
+                fail(f"Available catalogue entry {entry.get('id')} has no pagePath")
+            if entry.get("pagePath"):
+                page_target = ROOT / entry["pagePath"] / "index.html"
+                if not page_target.exists():
+                    fail(f"Catalogue pagePath for {entry.get('id')} does not exist: {entry['pagePath']}")
         if sum(bool(e.get("scriptPath")) for e in entries) != 30:
             fail("Expected 30 source-script references in the curriculum catalogue")
         if sum(e["status"] == "available" for e in entries) != 10:
