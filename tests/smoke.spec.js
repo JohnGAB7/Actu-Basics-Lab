@@ -125,7 +125,8 @@ test('learning paths provide keyboard skip navigation and an operable mobile men
     const panel = page.locator('.mobile-menu-panel');
     await expect(panel).toBeVisible();
     await expect(panel.locator('a[aria-current="page"]')).toBeVisible();
-    await skip.click();
+    await skip.focus();
+    await skip.press('Enter');
     await expect(page.locator('#contenu')).toBeFocused();
     await expect(page.locator('html')).toHaveAttribute('lang', english ? 'en' : 'fr');
     const width = await page.evaluate(() => document.documentElement.scrollWidth);
@@ -138,8 +139,11 @@ test('learning path navigation and focus indicators work at desktop width', asyn
   await page.goto('parcours/');
   await expect(page.locator('nav[aria-label="Navigation principale"] a[aria-current="page"]')).toContainText('Parcours');
   await expect(page.locator('.mobile-menu')).toBeHidden();
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
   const firstLink = page.locator('nav[aria-label="Navigation principale"] a').first();
-  await firstLink.focus();
+  await expect(firstLink).toBeFocused();
   const outline = await firstLink.evaluate(el => getComputedStyle(el).outlineStyle);
   expect(outline).not.toBe('none');
 });
