@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0",
+  "title": "ACTU-BASICS — prototype de graphe des concepts statistiques",
+  "status": "design",
+  "note": "Prototype de conception. Les correspondances avec les identifiants du catalogue existant restent à auditer avant intégration au site.",
+  "nodes": [
+    {
+      "id": "math.fractions-ratios",
+      "type": "concept",
+      "title_fr": "Fractions et proportions",
+      "title_en": "Fractions and proportions",
+      "stage": 1
+    },
+    {
+      "id": "math.algebra-functions",
+      "type": "concept",
+      "title_fr": "Algèbre et fonctions",
+      "title_en": "Algebra and functions",
+      "stage": 1
+    },
+    {
+      "id": "data.variable-types",
+      "type": "concept",
+      "title_fr": "Variables et échelles de mesure",
+      "title_en": "Variables and measurement scales",
+      "stage": 2
+    },
+    {
+      "id": "data.population-sample",
+      "type": "concept",
+      "title_fr": "Population et échantillon",
+      "title_en": "Population and sample",
+      "stage": 2
+    },
+    {
+      "id": "data.bias",
+      "type": "concept",
+      "title_fr": "Biais de sélection et de mesure",
+      "title_en": "Selection and measurement bias",
+      "stage": 2
+    },
+    {
+      "id": "desc.frequency",
+      "type": "concept",
+      "title_fr": "Fréquences et distributions empiriques",
+      "title_en": "Frequencies and empirical distributions",
+      "stage": 2
+    },
+    {
+      "id": "desc.visualization",
+      "type": "skill",
+      "title_fr": "Visualiser une distribution",
+      "title_en": "Visualize a distribution",
+      "stage": 2
+    },
+    {
+      "id": "desc.center",
+      "type": "concept",
+      "title_fr": "Moyenne et médiane",
+      "title_en": "Mean and median",
+      "stage": 2
+    },
+    {
+      "id": "desc.spread",
+      "type": "concept",
+      "title_fr": "Variance et dispersion",
+      "title_en": "Variance and spread",
+      "stage": 2
+    },
+    {
+      "id": "prob.events",
+      "type": "concept",
+      "title_fr": "Événements et règles de probabilité",
+      "title_en": "Events and probability rules",
+      "stage": 2
+    },
+    {
+      "id": "prob.conditional",
+      "type": "concept",
+      "title_fr": "Probabilité conditionnelle et indépendance",
+      "title_en": "Conditional probability and independence",
+      "stage": 2
+    },
+    {
+      "id": "prob.random-variable",
+      "type": "concept",
+      "title_fr": "Variable aléatoire",
+      "title_en": "Random variable",
+      "stage": 2
+    },
+    {
+      "id": "prob.distributions",
+      "type": "concept",
+      "title_fr": "Lois de probabilité",
+      "title_en": "Probability distributions",
+      "stage": 2
+    },
+    {
+      "id": "prob.expectation-variance",
+      "type": "concept",
+      "title_fr": "Espérance et variance",
+      "title_en": "Expectation and variance",
+      "stage": 2
+    },
+    {
+      "id": "infer.sampling-distribution",
+      "type": "concept",
+      "title_fr": "Distribution d'échantillonnage",
+      "title_en": "Sampling distribution",
+      "stage": 3
+    },
+    {
+      "id": "infer.estimation",
+      "type": "concept",
+      "title_fr": "Estimation et erreur standard",
+      "title_en": "Estimation and standard error",
+      "stage": 3
+    },
+    {
+      "id": "infer.confidence-interval",
+      "type": "concept",
+      "title_fr": "Intervalle de confiance",
+      "title_en": "Confidence interval",
+      "stage": 3
+    },
+    {
+      "id": "infer.hypothesis-test",
+      "type": "concept",
+      "title_fr": "Test d'hypothèse",
+      "title_en": "Hypothesis test",
+      "stage": 3
+    },
+    {
+      "id": "model.linear-regression",
+      "type": "concept",
+      "title_fr": "Régression linéaire",
+      "title_en": "Linear regression",
+      "stage": 3
+    },
+    {
+      "id": "model.diagnostics",
+      "type": "skill",
+      "title_fr": "Diagnostiquer un modèle",
+      "title_en": "Diagnose a model",
+      "stage": 3
+    },
+    {
+      "id": "skill.interpret-uncertainty",
+      "type": "skill",
+      "title_fr": "Interpréter l'incertitude",
+      "title_en": "Interpret uncertainty",
+      "stage": 3
+    },
+    {
+      "id": "tool.excel-statistics",
+      "type": "tool_practice",
+      "title_fr": "Atelier statistique dans Excel",
+      "title_en": "Statistical practice in Excel",
+      "stage": 3
+    },
+    {
+      "id": "tool.python-statistics",
+      "type": "tool_practice",
+      "title_fr": "Atelier statistique dans Python",
+      "title_en": "Statistical practice in Python",
+      "stage": 3
+    },
+    {
+      "id": "tool.r-statistics",
+      "type": "tool_practice",
+      "title_fr": "Atelier statistique dans R",
+      "title_en": "Statistical practice in R",
+      "stage": 3
+    },
+    {
+      "id": "project.exploratory-audit",
+      "type": "project",
+      "title_fr": "Audit exploratoire d'un jeu de données",
+      "title_en": "Exploratory data audit",
+      "stage": 3
+    }
+  ],
+  "edges": [
+    {
+      "from": "math.fractions-ratios",
+      "to": "desc.frequency",
+      "type": "supports"
+    },
+    {
+      "from": "math.algebra-functions",
+      "to": "prob.distributions",
+      "type": "supports"
+    },
+    {
+      "from": "data.variable-types",
+      "to": "desc.frequency",
+      "type": "requires"
+    },
+    {
+      "from": "data.population-sample",
+      "to": "infer.sampling-distribution",
+      "type": "requires"
+    },
+    {
+      "from": "data.bias",
+      "to": "infer.estimation",
+      "type": "supports"
+    },
+    {
+      "from": "desc.frequency",
+      "to": "desc.visualization",
+      "type": "supports"
+    },
+    {
+      "from": "desc.frequency",
+      "to": "desc.center",
+      "type": "requires"
+    },
+    {
+      "from": "desc.frequency",
+      "to": "desc.spread",
+      "type": "requires"
+    },
+    {
+      "from": "prob.events",
+      "to": "prob.conditional",
+      "type": "requires"
+    },
+    {
+      "from": "prob.conditional",
+      "to": "prob.random-variable",
+      "type": "supports"
+    },
+    {
+      "from": "prob.random-variable",
+      "to": "prob.distributions",
+      "type": "requires"
+    },
+    {
+      "from": "prob.distributions",
+      "to": "prob.expectation-variance",
+      "type": "requires"
+    },
+    {
+      "from": "desc.spread",
+      "to": "prob.expectation-variance",
+      "type": "supports"
+    },
+    {
+      "from": "data.population-sample",
+      "to": "infer.sampling-distribution",
+      "type": "requires"
+    },
+    {
+      "from": "prob.distributions",
+      "to": "infer.sampling-distribution",
+      "type": "supports"
+    },
+    {
+      "from": "infer.sampling-distribution",
+      "to": "infer.estimation",
+      "type": "requires"
+    },
+    {
+      "from": "infer.estimation",
+      "to": "infer.confidence-interval",
+      "type": "requires"
+    },
+    {
+      "from": "infer.estimation",
+      "to": "infer.hypothesis-test",
+      "type": "requires"
+    },
+    {
+      "from": "desc.visualization",
+      "to": "model.linear-regression",
+      "type": "supports"
+    },
+    {
+      "from": "prob.expectation-variance",
+      "to": "model.linear-regression",
+      "type": "supports"
+    },
+    {
+      "from": "model.linear-regression",
+      "to": "model.diagnostics",
+      "type": "requires"
+    },
+    {
+      "from": "infer.confidence-interval",
+      "to": "skill.interpret-uncertainty",
+      "type": "supports"
+    },
+    {
+      "from": "infer.hypothesis-test",
+      "to": "skill.interpret-uncertainty",
+      "type": "supports"
+    },
+    {
+      "from": "desc.frequency",
+      "to": "tool.excel-statistics",
+      "type": "applies"
+    },
+    {
+      "from": "desc.center",
+      "to": "tool.excel-statistics",
+      "type": "applies"
+    },
+    {
+      "from": "desc.center",
+      "to": "tool.python-statistics",
+      "type": "applies"
+    },
+    {
+      "from": "desc.spread",
+      "to": "tool.r-statistics",
+      "type": "applies"
+    },
+    {
+      "from": "data.variable-types",
+      "to": "project.exploratory-audit",
+      "type": "applies"
+    },
+    {
+      "from": "data.bias",
+      "to": "project.exploratory-audit",
+      "type": "applies"
+    },
+    {
+      "from": "desc.visualization",
+      "to": "project.exploratory-audit",
+      "type": "applies"
+    },
+    {
+      "from": "desc.center",
+      "to": "project.exploratory-audit",
+      "type": "applies"
+    },
+    {
+      "from": "desc.spread",
+      "to": "project.exploratory-audit",
+      "type": "applies"
+    }
+  ],
+  "governance": {
+    "strict_prerequisite_relation": "requires",
+    "acyclic_relation_types": [
+      "requires"
+    ],
+    "allowed_edge_types": [
+      "requires",
+      "recommends",
+      "supports",
+      "applies",
+      "assessed_by",
+      "continues_to"
+    ],
+    "source_mapping": "Must be reconciled against data/catalogue.json and validated source metadata before site integration."
+  }
+}
