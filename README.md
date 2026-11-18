@@ -1,38 +1,53 @@
 # ACTU-BASICS LAB
 
-Un laboratoire indépendant pour explorer une expérience éditoriale et pédagogique premium, sans modifier le dépôt du site de référence.
+**Un laboratoire indépendant pour perfectionner ACTU-BASICS.**
 
-## Vision
+Le dépôt source `JohnGAB7/Actu-Basics` reste la référence pédagogique et éditoriale. Ce laboratoire développe une expérience web plus aboutie, sans modifier le dépôt source ni sa publication.
 
-Faire des statistiques, des probabilités et des sciences actuarielles des disciplines compréhensibles, rigoureuses et vivantes. L'expérience relie trois gestes : découvrir une notion, approfondir la méthode, puis pratiquer.
+## Direction de conception
 
-## Direction visuelle
+- Direction visuelle : ivoire, turquoise profond et or doux.
+- Typographie : conserver la personnalité éditoriale du site de référence ; titres serif, interface sans-serif lisible.
+- Marque : signature FR « Éveiller par les chiffres. » ; EN « Enlightening through numbers. »
+- Expérience : navigation responsive, FR/EN, thèmes clair/sombre, recherche et filtres.
+- Méthode d'apprentissage : question → intuition → formalisation → pratique.
 
-- Palette de marque : bleu nuit `#06152B`, bleu `#1685D5`, orange `#FF8500`, blanc et surfaces neutres.
-- Typographies : Newsreader pour les titres éditoriaux ; DM Sans et Manrope pour l'interface.
-- Composition éditoriale : hiérarchie typographique marquée, espace généreux, lignes fines, accents colorés mesurés et illustrations vectorielles originales.
-- Mode clair/sombre, navigation responsive, focus clavier et prise en compte de `prefers-reduced-motion`.
+## Parcours
 
-## Fonctionnalités de cette itération
+1. Statistiques et probabilités.
+2. Mathématiques financières.
+3. Sciences actuarielles.
 
-- Accueil éditorial bilingue FR/EN.
-- Présentation de la pédagogie et des trois domaines d'apprentissage.
-- Recherche locale et filtres de bibliothèque.
-- Bascule de thème et navigation mobile accessible.
-- Métadonnées de partage et structure sémantique.
+## Rapport au dépôt source
 
-## État et limites
+Ce laboratoire doit être un perfectionnement, pas un fork aveugle ni une réécriture déconnectée. Les contenus sont repris depuis les sources du dépôt de référence en conservant :
+- les titres, objectifs, prérequis et niveaux ;
+- les définitions, raisonnements, formules et hypothèses ;
+- les sources, dates, unités, périmètres et incertitudes ;
+- les exemples, exercices, corrections et limites ;
+- les états de validation éditoriale.
 
-La page d'accueil constitue une proposition visuelle et fonctionnelle autonome. Les cartes de bibliothèque sont explicitement une sélection de démonstration : elles ne remplacent pas le catalogue de référence et ne prétendent pas ouvrir des leçons qui ne sont pas encore raccordées. Aucun contenu scientifique ni résultat numérique n'a été inventé.
+Une fiche de conception ne doit jamais être présentée comme une leçon publiée. Chaque page du catalogue doit distinguer les contenus disponibles, en préparation et non encore migrés. Les versions FR et EN doivent être cohérentes sur les nombres, unités et résultats.
 
-Les prochaines étapes sont la migration structurée des véritables contenus FR/EN, le raccordement des leçons et médias, puis la validation des formules, graphiques, unités, sources et exercices.
+## État de cette itération
 
-## Gouvernance
+La page d'accueil et son catalogue exploratoire ont été réalignés sur la direction visuelle retenue. La bibliothèque montre une leçon réellement disponible (A0.01) et quelques fiches source clairement étiquetées « en préparation ». Elle ne prétend pas encore représenter les 45 leçons complètes.
 
-- Dépôt indépendant : https://github.com/JohnGAB7/Actu-Basics-Lab
-- Le dépôt de référence `JohnGAB7/Actu-Basics` n'est pas modifié par ce laboratoire.
-- Aucun déploiement public ni fusion dans le site de référence sans décision explicite.
+Le contenu A0.01 doit être intégré dans une page de leçon native du laboratoire, avec amélioration du confort de lecture et contrôle de cohérence bilingue. Les fiches de conception et de production seront migrées par lots après validation de leur statut et de leurs ressources.
+
+## Qualité et sécurité
+
+- Le dépôt source n'est pas modifié par ce laboratoire.
+- Aucune fusion vers le dépôt source ni publication publique n'est implicite.
+- Vérifier les liens internes, les états de recherche, les contrôles clavier, le mobile et les deux langues.
+- Les formules, graphiques et valeurs numériques doivent être recalculés/contrôlés avant de déclarer une leçon validée.
+- L'URL publique GitHub Pages ne sera annoncée qu'après activation de Pages et succès confirmé du workflow.
 
 ## Publication
 
-Le workflow GitHub Pages est défini dans `.github/workflows/pages.yml`. GitHub Pages doit être configuré pour utiliser GitHub Actions dans les paramètres du dépôt avant de confirmer une URL publique.
+Le workflow est défini dans `.github/workflows/pages.yml`. GitHub Pages doit être configuré avec **GitHub Actions** comme source dans les paramètres du dépôt.
+
+## Dépôts
+
+- Laboratoire : https://github.com/JohnGAB7/Actu-Basics-Lab
+- Référence : https://github.com/JohnGAB7/Actu-Basics
