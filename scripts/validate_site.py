@@ -123,8 +123,10 @@ else:
                     fail(f"Catalogue entry {entry.get('id', '?')} missing {field}")
             if entry.get("status") not in {"available", "script", "planned"}:
                 fail(f"Invalid status on {entry.get('id')}: {entry.get('status')}")
-        if sum(e["status"] == "script" for e in entries) != 30:
+        if sum(bool(e.get("scriptPath")) for e in entries) != 30:
             fail("Expected 30 source-script references in the curriculum catalogue")
+        if sum(e["status"] == "available" for e in entries) != 4:
+            fail("Expected four published curriculum lessons in the catalogue")
     except Exception as exc:
         fail(f"Catalogue JSON validation failed: {exc}")
 
@@ -134,6 +136,10 @@ required = [
     "en/about/index.html", "lessons/A0-01/index.html", "en/lessons/A0-01/index.html",
     "lessons/A1-01/index.html", "en/lessons/A1-01/index.html",
     "lessons/A2-01/index.html", "en/lessons/A2-01/index.html",
+    "lessons/M0-01/index.html", "en/lessons/M0-01/index.html",
+    "lessons/S1-01/index.html", "en/lessons/S1-01/index.html",
+    "lessons/S1-02/index.html", "en/lessons/S1-02/index.html",
+    "lessons/S1-03/index.html", "en/lessons/S1-03/index.html",
 ]
 for item in required:
     if not (ROOT / item).exists():
