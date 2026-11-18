@@ -16,7 +16,7 @@ test('homepage exposes the three published actuarial lessons', async ({ page }) 
 test('library loads the 320-unit source curriculum and filters it', async ({ page }) => {
   await page.goto('/bibliotheque/');
   await expect(page.locator('#count')).toContainText('320 / 320');
-  await page.locator('#search').fill('Paris');
+  await page.locator('#search').fill('S1.01');
   await expect(page.locator('#catalogue .card')).toHaveCount(1);
   await expect(page.locator('#catalogue')).toContainText('S1.01');
 });
