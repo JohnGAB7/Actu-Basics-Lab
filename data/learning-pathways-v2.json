@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "title": "ACTU-BASICS learning architecture",
+  "language": [
+    "fr",
+    "en"
+  ],
+  "pathways": [
+    {
+      "id": "P0",
+      "sequence": 0,
+      "title": "Socle opérationnel ciblé",
+      "strictPrerequisite": false
+    },
+    {
+      "id": "P1",
+      "sequence": 1,
+      "title": "Littératie statistique et données"
+    },
+    {
+      "id": "P2",
+      "sequence": 2,
+      "title": "Décrire et explorer les données"
+    },
+    {
+      "id": "P3",
+      "sequence": 3,
+      "title": "Probabilités et modélisation du hasard"
+    },
+    {
+      "id": "P4",
+      "sequence": 4,
+      "title": "Échantillonnage et inférence"
+    },
+    {
+      "id": "P5",
+      "sequence": 5,
+      "title": "Modèles statistiques et relations"
+    },
+    {
+      "id": "P6",
+      "sequence": 6,
+      "title": "Méthodes avancées et spécialités"
+    },
+    {
+      "id": "P7",
+      "sequence": 7,
+      "title": "Expertise, recherche et communication"
+    }
+  ],
+  "softwareTracks": [
+    {
+      "id": "excel",
+      "title": "Excel",
+      "mode": "analyse appliquée"
+    },
+    {
+      "id": "vba",
+      "title": "Excel VBA",
+      "mode": "automatisation ciblée optionnelle"
+    },
+    {
+      "id": "python",
+      "title": "Python",
+      "mode": "calcul scientifique et reproductibilité"
+    },
+    {
+      "id": "r",
+      "title": "R",
+      "mode": "statistique, modélisation et rapports"
+    }
+  ],
+  "documents": {
+    "curriculum": "docs/architecture/learning-pathways-v2.md",
+    "lessonStandard": "docs/architecture/lesson-standard-v2.md",
+    "demonstrationLesson": "docs/lessons/S2-04-moyenne-mediane.md"
+  },
+  "sourcesReviewedOn": "2026-11-18",
+  "principles": [
+    "intuition-before-formalism",
+    "just-in-time-mathematics",
+    "concept-before-software",
+    "shared-data-and-output-parity",
+    "source-provenance-and-explicit-status",
+    "assessment-by-transfer"
+  ]
+}
