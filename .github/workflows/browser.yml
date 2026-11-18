@@ -10,13 +10,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: browser-smoke-${{ github.ref }}
+  group: browser-smoke-v2-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   browser:
     name: Playwright browser checks
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -31,6 +32,6 @@ jobs:
       - name: Install test dependencies
         run: npm install --no-audit --no-fund
       - name: Install Chromium
-        run: npx playwright install chromium
+        run: npx playwright install --only-shell chromium
       - name: Run browser checks
         run: npm test
