@@ -52,7 +52,7 @@ Le workflow `.github/workflows/quality.yml` s'exécute sur les pull requests. Le
 - présence des pages bilingues A0.01, A1.01 et A2.01 ;
 - recalculs des principaux exemples actuariels et financiers, dont les probabilités binomiales du pilote A2.01.
 
-Ces contrôles automatisés ne remplacent pas une revue visuelle, un test réel au clavier ou une validation scientifique humaine.
+Les tests Playwright exécutent aussi les pages dans Chromium : navigation, chargement et filtres du catalogue, calculateur A1.01, simulateur binomial A2.01, route anglaise et débordement horizontal sur mobile.\n\nCes contrôles automatisés ne remplacent pas une revue visuelle multi-navigateurs, une validation manuelle approfondie au clavier ou une validation scientifique humaine.
 
 ## Publication et gouvernance
 
