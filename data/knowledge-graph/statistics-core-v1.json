@@ -2,14 +2,17 @@
   "schema_version": "1.0",
   "title": "ACTU-BASICS — prototype de graphe des concepts statistiques",
   "status": "design",
-  "note": "Prototype de conception. Les correspondances avec les identifiants du catalogue existant restent à auditer avant intégration au site.",
+  "note": "Prototype de conception. Les références catalogue ci-dessous sont vérifiées dans data/catalogue.json au moment de création ; les statuts éditoriaux restent ceux du catalogue et peuvent évoluer. Les correspondances doivent être réexaminées avant intégration au site.",
   "nodes": [
     {
       "id": "math.fractions-ratios",
       "type": "concept",
       "title_fr": "Fractions et proportions",
       "title_en": "Fractions and proportions",
-      "stage": 1
+      "stage": 1,
+      "catalogue_refs": [
+        "M0.01"
+      ]
     },
     {
       "id": "math.algebra-functions",
@@ -23,126 +26,184 @@
       "type": "concept",
       "title_fr": "Variables et échelles de mesure",
       "title_en": "Variables and measurement scales",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S1.03"
+      ]
     },
     {
       "id": "data.population-sample",
       "type": "concept",
       "title_fr": "Population et échantillon",
       "title_en": "Population and sample",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S1.02"
+      ]
     },
     {
       "id": "data.bias",
       "type": "concept",
       "title_fr": "Biais de sélection et de mesure",
       "title_en": "Selection and measurement bias",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S1.05"
+      ]
     },
     {
       "id": "desc.frequency",
       "type": "concept",
       "title_fr": "Fréquences et distributions empiriques",
       "title_en": "Frequencies and empirical distributions",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S2.01"
+      ]
     },
     {
       "id": "desc.visualization",
       "type": "skill",
       "title_fr": "Visualiser une distribution",
       "title_en": "Visualize a distribution",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "M0.03",
+        "S2.02"
+      ]
     },
     {
       "id": "desc.center",
       "type": "concept",
       "title_fr": "Moyenne et médiane",
       "title_en": "Mean and median",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S2.04",
+        "S2.05"
+      ]
     },
     {
       "id": "desc.spread",
       "type": "concept",
       "title_fr": "Variance et dispersion",
       "title_en": "Variance and spread",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S2.08"
+      ]
     },
     {
       "id": "prob.events",
       "type": "concept",
       "title_fr": "Événements et règles de probabilité",
       "title_en": "Events and probability rules",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S4.01"
+      ]
     },
     {
       "id": "prob.conditional",
       "type": "concept",
       "title_fr": "Probabilité conditionnelle et indépendance",
       "title_en": "Conditional probability and independence",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S4.07"
+      ]
     },
     {
       "id": "prob.random-variable",
       "type": "concept",
       "title_fr": "Variable aléatoire",
       "title_en": "Random variable",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S5.01"
+      ]
     },
     {
       "id": "prob.distributions",
       "type": "concept",
       "title_fr": "Lois de probabilité",
       "title_en": "Probability distributions",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S5.01"
+      ]
     },
     {
       "id": "prob.expectation-variance",
       "type": "concept",
       "title_fr": "Espérance et variance",
       "title_en": "Expectation and variance",
-      "stage": 2
+      "stage": 2,
+      "catalogue_refs": [
+        "S5.02",
+        "S5.03"
+      ]
     },
     {
       "id": "infer.sampling-distribution",
       "type": "concept",
       "title_fr": "Distribution d'échantillonnage",
       "title_en": "Sampling distribution",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S6.02"
+      ]
     },
     {
       "id": "infer.estimation",
       "type": "concept",
       "title_fr": "Estimation et erreur standard",
       "title_en": "Estimation and standard error",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S7.01"
+      ]
     },
     {
       "id": "infer.confidence-interval",
       "type": "concept",
       "title_fr": "Intervalle de confiance",
       "title_en": "Confidence interval",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S7.06",
+        "S7.07"
+      ]
     },
     {
       "id": "infer.hypothesis-test",
       "type": "concept",
       "title_fr": "Test d'hypothèse",
       "title_en": "Hypothesis test",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S8.01"
+      ]
     },
     {
       "id": "model.linear-regression",
       "type": "concept",
       "title_fr": "Régression linéaire",
       "title_en": "Linear regression",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S9.01"
+      ]
     },
     {
       "id": "model.diagnostics",
       "type": "skill",
       "title_fr": "Diagnostiquer un modèle",
       "title_en": "Diagnose a model",
-      "stage": 3
+      "stage": 3,
+      "catalogue_refs": [
+        "S9.06"
+      ]
     },
     {
       "id": "skill.interpret-uncertainty",
