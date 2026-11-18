@@ -7,45 +7,61 @@ Le dépôt source `JohnGAB7/Actu-Basics` reste la référence pédagogique et é
 ## Direction de conception
 
 - Direction visuelle : ivoire, turquoise profond et or doux.
-- Typographie : conserver la personnalité éditoriale du site de référence ; titres serif, interface sans-serif lisible.
-- Marque : signature FR « Éveiller par les chiffres. » ; EN « Enlightening through numbers. »
-- Expérience : navigation responsive, FR/EN, thèmes clair/sombre, recherche et filtres.
-- Méthode d'apprentissage : question → intuition → formalisation → pratique.
+- Typographie : titres serif et interface sans-serif lisible.
+- Signature FR : « Éveiller par les chiffres. » ; EN : « Enlightening through numbers. »
+- Expérience : navigation responsive, éditions FR/EN, thèmes clair/sombre, recherche et filtres.
+- Méthode : question → intuition → formalisation → pratique.
 
-## Parcours
+## Parcours et pages web intégrées
 
-1. Statistiques et probabilités.
-2. Mathématiques financières.
-3. Sciences actuarielles.
+- Statistiques, probabilités et économétrie : catalogue issu du programme de référence (320 unités).
+- Mathématiques financières : A1.01, intérêts composés et actualisation.
+- Sciences actuarielles : A0.01, introduction et prime pure ; A2.01, mutualisation des risques.
+- Les trois leçons actuarielles A0.01, A1.01 et A2.01 disposent de pages FR/EN dans le laboratoire.
+- Les pages A1.01 et A2.01 intègrent des calculateurs interactifs.
+
+## Catalogue pédagogique et statuts
+
+`data/catalogue.json` est extrait des sept fichiers de catalogue du programme de référence. Il contient 320 unités avec titres, questions, modules, niveaux, durées indicatives, prérequis et références de provenance.
+
+Les statuts sont volontairement distincts :
+- **Leçon disponible** : une page web complète existe dans le laboratoire.
+- **Script source disponible** : un script existe dans le dépôt de référence, mais n'est pas automatiquement une page web publiée ici.
+- **Au programme** : l'unité figure dans le syllabus, mais sa page et son script ne sont pas encore intégrés.
+
+Le catalogue recense actuellement 30 scripts sources pour les unités du programme. Les trois pilotes du parcours actuariat sont référencés séparément. Un script, une fiche de conception, une vidéo rendue et une leçon web sont quatre artefacts différents : ils ne doivent pas être confondus.
 
 ## Rapport au dépôt source
 
 Ce laboratoire doit être un perfectionnement, pas un fork aveugle ni une réécriture déconnectée. Les contenus sont repris depuis les sources du dépôt de référence en conservant :
-- les titres, objectifs, prérequis et niveaux ;
-- les définitions, raisonnements, formules et hypothèses ;
-- les sources, dates, unités, périmètres et incertitudes ;
-- les exemples, exercices, corrections et limites ;
-- les états de validation éditoriale.
+- titres, objectifs, prérequis et niveaux ;
+- définitions, raisonnements, formules et hypothèses ;
+- sources, dates, unités, périmètres et incertitudes ;
+- exemples, exercices, corrections et limites ;
+- états de validation éditoriale.
 
-Une fiche de conception ne doit jamais être présentée comme une leçon publiée. Chaque page du catalogue doit distinguer les contenus disponibles, en préparation et non encore migrés. Les versions FR et EN doivent être cohérentes sur les nombres, unités et résultats.
+Les leçons A1.01 et A2.01 sont adaptées des scripts FR/EN validés par le propriétaire du projet dans le dépôt source. Les montants sont présentés en euros dans les deux éditions du laboratoire pour garder une lecture homogène. Les hypothèses simplificatrices des modèles sont explicites.
 
-## État de cette itération
+## Qualité
 
-La page d'accueil et son catalogue exploratoire ont été réalignés sur la direction visuelle retenue. La bibliothèque montre une leçon réellement disponible (A0.01) et quelques fiches source clairement étiquetées « en préparation ». Elle ne prétend pas encore représenter les 45 leçons complètes.
+Le workflow `.github/workflows/quality.yml` s'exécute sur les pull requests. Le script `scripts/validate_site.py` contrôle :
+- structure HTML minimale, langue, titre et viewport ;
+- identifiants HTML uniques et attributs `alt` ;
+- chemins et fragments des liens locaux ;
+- structure et unicité des 320 unités du catalogue ;
+- présence des pages bilingues A0.01, A1.01 et A2.01 ;
+- recalculs des principaux exemples actuariels et financiers, dont les probabilités binomiales du pilote A2.01.
 
-Le contenu A0.01 doit être intégré dans une page de leçon native du laboratoire, avec amélioration du confort de lecture et contrôle de cohérence bilingue. Les fiches de conception et de production seront migrées par lots après validation de leur statut et de leurs ressources.
+Ces contrôles automatisés ne remplacent pas une revue visuelle, un test réel au clavier ou une validation scientifique humaine.
 
-## Qualité et sécurité
+## Publication et gouvernance
 
 - Le dépôt source n'est pas modifié par ce laboratoire.
-- Aucune fusion vers le dépôt source ni publication publique n'est implicite.
-- Vérifier les liens internes, les états de recherche, les contrôles clavier, le mobile et les deux langues.
-- Les formules, graphiques et valeurs numériques doivent être recalculés/contrôlés avant de déclarer une leçon validée.
-- L'URL publique GitHub Pages ne sera annoncée qu'après activation de Pages et succès confirmé du workflow.
-
-## Publication
-
-Le workflow est défini dans `.github/workflows/pages.yml`. GitHub Pages doit être configuré avec **GitHub Actions** comme source dans les paramètres du dépôt.
+- La branche de travail est `chatgpt/premium-editorial-v1`.
+- La PR #1 est maintenue ouverte jusqu'à réussite des contrôles et vérifications visuelles.
+- Aucune fusion vers le dépôt source n'est prévue.
+- Aucun déploiement public n'est annoncé tant que le workflow Pages n'a pas publié cette version avec succès.
+- GitHub Pages doit utiliser **GitHub Actions** comme source dans les paramètres du dépôt.
 
 ## Dépôts
 
