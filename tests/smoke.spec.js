@@ -44,7 +44,7 @@ test('A2.01 risk-pooling simulator returns the validated binomial examples', asy
 test('English routes open the English edition', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('h1')).toContainText('One question can open up a whole world');
+  await expect(page.locator('h1')).toContainText('Numbers tell stories');
 });
 
 test('lesson pages remain within the mobile viewport', async ({ page }) => {
