@@ -247,11 +247,6 @@
       "type": "supports"
     },
     {
-      "from": "data.population-sample",
-      "to": "infer.sampling-distribution",
-      "type": "requires"
-    },
-    {
       "from": "prob.distributions",
       "to": "infer.sampling-distribution",
       "type": "supports"
