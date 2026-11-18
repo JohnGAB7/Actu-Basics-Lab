@@ -1,0 +1,12 @@
+{
+  "name": "actu-basics-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent bilingual learning platform for statistics and actuarial science",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
