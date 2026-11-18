@@ -22,3 +22,5 @@ jobs:
           python-version: "3.12"
       - name: Validate pages, links, catalogue and calculations
         run: python scripts/validate_site.py
+      - name: Validate knowledge graph and catalogue references
+        run: python scripts/validate_knowledge_graph.py
