@@ -109,3 +109,37 @@ test('lesson pages remain within the mobile viewport', async ({ page }) => {
     expect(width, 'horizontal overflow on ' + route).toBeLessThanOrEqual(375);
   }
 });
+
+
+test('learning paths provide keyboard skip navigation and an operable mobile menu', async ({ page }) => {
+  for (const route of ['parcours/', 'en/paths/']) {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(route);
+    const english = route.startsWith('en/');
+    const skip = page.locator('.skip-link');
+    await expect(skip).toBeAttached();
+    await page.keyboard.press('Tab');
+    await expect(skip).toBeFocused();
+    await expect(skip).toHaveAttribute('href', '#contenu');
+    await page.locator('.mobile-menu summary').click();
+    const panel = page.locator('.mobile-menu-panel');
+    await expect(panel).toBeVisible();
+    await expect(panel.locator('a[aria-current="page"]')).toBeVisible();
+    await skip.click();
+    await expect(page.locator('#contenu')).toBeFocused();
+    await expect(page.locator('html')).toHaveAttribute('lang', english ? 'en' : 'fr');
+    const width = await page.evaluate(() => document.documentElement.scrollWidth);
+    expect(width, 'horizontal overflow on ' + route).toBeLessThanOrEqual(390);
+  }
+});
+
+test('learning path navigation and focus indicators work at desktop width', async ({ page }) => {
+  await page.setViewportSize({ width: 1365, height: 900 });
+  await page.goto('parcours/');
+  await expect(page.locator('nav[aria-label="Navigation principale"] a[aria-current="page"]')).toContainText('Parcours');
+  await expect(page.locator('.mobile-menu')).toBeHidden();
+  const firstLink = page.locator('nav[aria-label="Navigation principale"] a').first();
+  await firstLink.focus();
+  const outline = await firstLink.evaluate(el => getComputedStyle(el).outlineStyle);
+  expect(outline).not.toBe('none');
+});
