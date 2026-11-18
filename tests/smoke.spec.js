@@ -15,13 +15,19 @@ test('homepage exposes the three published actuarial lessons', async ({ page }) 
   await expect(page.locator('a.lesson[href="lessons/S1-02/"]')).toBeVisible();
   await expect(page.locator('a.lesson[href="lessons/S1-03/"]')).toBeVisible();
   await expect(page.locator('a.lesson[href="lessons/M0-01/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/M0-02/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/M0-03/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-04/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-05/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-06/"]')).toBeVisible();
+  await expect(page.locator('a.lesson[href="lessons/S1-07/"]')).toBeVisible();
 });
 
 test('library loads the 320-unit source curriculum and filters it', async ({ page }) => {
   await page.goto('/bibliotheque/');
   await expect(page.locator('#count')).toContainText('320 / 320');
   await page.locator('#status').selectOption('available');
-  await expect(page.locator('#catalogue .card')).toHaveCount(4);
+  await expect(page.locator('#catalogue .card')).toHaveCount(10);
   await expect(page.locator('#catalogue')).toContainText('S1.01');
   await page.locator('#search').fill('S1.01');
   await expect(page.locator('#catalogue .card')).toHaveCount(1);
@@ -62,6 +68,21 @@ test('S1.01 exercise gives immediate corrective feedback', async ({ page }) => {
   await expect(page.locator('.feedback')).toContainText('Exact');
 });
 
+test('S1.05 transcript reveals source-script corrections', async ({ page }) => {
+  await page.goto('/lessons/S1-05/');
+  const reveal = page.locator('.reveal').first();
+  await expect(reveal).toBeVisible();
+  await reveal.click();
+  await expect(page.locator('.correction').first()).toHaveClass(/show/);
+});
+
+test('M0.02 and S1.04 transcript lessons render source material', async ({ page }) => {
+  await page.goto('/lessons/M0-02/');
+  await expect(page.locator('h1')).toContainText('Un milliard de secondes');
+  await page.goto('/lessons/S1-04/');
+  await expect(page.locator('h1')).toContainText('Combien de chômeurs');
+});
+
 test('English routes open the English edition', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
@@ -70,7 +91,7 @@ test('English routes open the English edition', async ({ page }) => {
 
 test('lesson pages remain within the mobile viewport', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  for (const route of ['/lessons/A0-01/', '/lessons/A1-01/', '/lessons/A2-01/', '/lessons/M0-01/', '/lessons/S1-01/', '/lessons/S1-02/', '/lessons/S1-03/', '/bibliotheque/']) {
+  for (const route of ['/lessons/A0-01/', '/lessons/A1-01/', '/lessons/A2-01/', '/lessons/M0-01/', '/lessons/M0-02/', '/lessons/M0-03/', '/lessons/S1-01/', '/lessons/S1-02/', '/lessons/S1-03/', '/lessons/S1-04/', '/lessons/S1-05/', '/lessons/S1-06/', '/lessons/S1-07/', '/bibliotheque/']) {
     await page.goto(route);
     await expect(page.locator('h1, .hero h1').first()).toBeVisible();
     const width = await page.evaluate(() => document.documentElement.scrollWidth);
