@@ -90,6 +90,14 @@ test('English routes open the English edition', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('h1')).toContainText('Numbers tell stories');
+  await expect(page.locator('a.lesson[href="en/lessons/S1-01/"]')).toBeVisible();
+  await page.goto('/en/library/');
+  await page.locator('#status').selectOption('available');
+  await page.locator('#search').fill('S1.01');
+  const englishLesson = page.locator('#catalogue a').first();
+  await expect(englishLesson).toHaveAttribute('href', '../lessons/S1-01/');
+  await englishLesson.click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
 test('lesson pages remain within the mobile viewport', async ({ page }) => {
