@@ -68,14 +68,19 @@ Pour une régression linéaire, l'apprenant réutilise les nuages de points, la 
 
 Le fichier `data/knowledge-graph/statistics-core-v1.json` est un prototype pédagogique limité. Il ne prétend pas être le graphe complet du catalogue et ne modifie aucun statut de validation des leçons.
 
-Avant tout branchement au site :
-- vérifier chaque correspondance avec `data/catalogue.json` ;
+Avant toute promotion du graphe de `design` vers `reviewed` ou `approved` :
+- faire réviser pédagogiquement chaque relation et justifier les prérequis stricts ;
+- vérifier chaque correspondance avec `data/catalogue.json` et le statut éditorial des scripts ;
 - contrôler l'unicité des identifiants et l'intégrité référentielle ;
 - détecter les cycles dans `requires` ;
 - valider les relations et les traductions FR/EN ;
-- ajouter des tests automatisés et une visualisation accessible ;
+- compléter les tests automatisés par une revue d'accessibilité clavier et lecteur d'écran ;
 - ne pas exposer les nœuds « design » comme des leçons publiées.
 
-## 8. Statut
+## 8. Statut et exposition sur le site
 
-Cette spécification et son petit graphe de démonstration sont des propositions de conception. Ils ne sont ni une migration du catalogue, ni un moteur fonctionnel, ni une validation officielle de nouvelles leçons.
+Le prototype `data/knowledge-graph/statistics-core-v1.json` contient actuellement **26 nœuds et 32 relations**. Il inclut les pratiques Excel, VBA, Python et R ainsi qu'un premier projet d'audit exploratoire. Les relations `requires` restent soumises à une revue pédagogique.
+
+Une visualisation bilingue est désormais accessible depuis `connaissances/` et `en/knowledge-map/`. Elle permet de filtrer les types de relations, de sélectionner les notions et de consulter leurs références catalogue, en distinguant les pages disponibles des unités au programme ou scripts sources. La carte est une aide à la navigation et à la compréhension de l'architecture ; elle ne calcule pas encore le niveau d'un apprenant, ne stocke pas de progression et ne certifie aucune maîtrise.
+
+Le statut du graphe reste `design`. Cette exposition publique ne constitue ni une migration du catalogue, ni un moteur adaptatif complet, ni une validation officielle de nouvelles leçons.
