@@ -1,0 +1,120 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Practical Excel, VBA, Python and R workshops for statistical and actuarial analysis."><title>Software workshops · ACTU-BASICS</title><style>
+:root{--paper:#f7f5ef;--surface:#fffefa;--soft:#eeece4;--ink:#183b3b;--muted:#647774;--line:#deded2;--teal:#176b67;--deep:#104b49;--gold:#8a672e;--serif:Georgia,serif;--sans:Inter,system-ui,sans-serif}[data-theme=dark]{color-scheme:dark;--paper:#142624;--surface:#203632;--soft:#1c322f;--ink:#f1f0e8;--muted:#aabbb2;--line:#38514b;--teal:#80b9aa;--deep:#a1cbbd;--gold:#d7b775}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--sans)}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}header{background:var(--surface);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:850;letter-spacing:.12em;font-size:12px;text-decoration:none}.navlinks{display:flex;gap:18px;font-size:12px;color:var(--muted)}.tool{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px}.hero{background:var(--deep);color:#fff;padding:52px 0}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#e4d2a9}.hero h1{font:500 clamp(38px,5vw,58px)/1.05 var(--serif);margin:14px 0}.hero p{max-width:790px;color:#e0e9e2}.main{padding:34px 0 80px}.notice{padding:17px 20px;background:var(--soft);border-left:4px solid var(--gold);font-size:13px;margin-bottom:24px}.introgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 36px}.intro{background:var(--surface);border:1px solid var(--line);padding:16px}.intro b{display:block;font:26px var(--serif);color:var(--teal)}.intro span{font-size:11px;color:var(--muted)}.section{margin:38px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:18px}.sectionhead h2{font:32px var(--serif);margin:5px 0}.sectionhead p{max-width:520px;color:var(--muted);font-size:12px;margin:0}.card{background:var(--surface);border:1px solid var(--line);padding:22px;margin:14px 0}.card h3{font:23px var(--serif);margin:0 0 8px}.card p{color:var(--muted);font-size:13px}.steps{padding-left:22px;font-size:13px}.steps li{margin:7px 0}.formula{background:var(--soft);padding:12px 14px;font:13px ui-monospace,monospace;overflow-x:auto}.codebox{background:#172c29;color:#edf2ec;padding:16px;overflow-x:auto;border-radius:3px;margin:12px 0}.codebox pre{margin:0;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}.copy{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px;font-size:11px;cursor:pointer}.meta{font-size:11px;color:var(--muted)}.expected{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.metric{padding:12px 14px;background:var(--soft);min-width:150px}.metric b{display:block;font:22px var(--serif)}.metric span{font-size:10px;color:var(--muted)}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;background:var(--surface)}th,td{border:1px solid var(--line);padding:9px;text-align:right}th:first-child,td:first-child{text-align:left}th{background:var(--soft)}.cta{display:inline-block;padding:12px 16px;background:var(--deep);color:#fff;text-decoration:none;font-weight:750;font-size:12px;margin:6px 8px 6px 0}.cta.alt{background:var(--soft);color:var(--ink)}footer{background:var(--deep);color:#e4ece6;padding:24px 0;font-size:11px}@media(max-width:850px){.introgrid{grid-template-columns:1fr 1fr}.sectionhead{display:block}.sectionhead p{margin-top:8px}}@media(max-width:650px){.navlinks{display:none}.introgrid{grid-template-columns:1fr 1fr}.card{padding:15px}.wrap{width:calc(100% - 28px)}}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+</style></head><body><header><div class="wrap nav"><a class="brand" href="../../en/">∑ ACTU-BASICS</a><nav class="navlinks" aria-label="Primary navigation"><a href="../paths/">Learning paths</a><a href="../knowledge-map/">Knowledge map</a><a href="./" aria-current="page">Software workshops</a><a href="../library/">Library</a></nav><div><a class="tool" href="../../ateliers/">FR</a> <button class="tool" id="theme" type="button">◐ Theme</button></div></div></header>
+<section class="hero"><div class="wrap"><span class="eyebrow">Learn by building</span><h1>Four tools.<br>One standard of reasoning.</h1><p>A shared first workshop to analyse a fictional claims portfolio. Solve the same problem in Excel, automate a summary with VBA, then reproduce the analysis in Python and R.</p></div></section>
+<main class="wrap main"><div class="notice"><strong>Pilot workshop — entirely synthetic dataset.</strong> The figures are fabricated for learning. They do not represent an insurer, a real population or a pricing recommendation. The goal is to understand the indicators and verify that they agree across tools.</div>
+<div class="introgrid"><div class="intro"><b>01</b><span>Import and validate data</span></div><div class="intro"><b>02</b><span>Calculate frequency and costs</span></div><div class="intro"><b>03</b><span>Compare results</span></div><div class="intro"><b>04</b><span>Explain limitations</span></div></div>
+<section class="section"><div class="sectionhead"><div><span class="tag">Shared data</span><h2>A miniature insurance portfolio</h2></div><p>Six fictional segments. Each row contains exposure, claim count, earned premium and incurred claims cost.</p></div>
+<p><a class="cta" href="../../data/atelier-sinistres-synthetiques.csv" download>Download CSV ↧</a><span class="meta">UTF-8 · comma-separated · amounts in euros</span></p>
+<div class="tablewrap"><table><thead><tr><th>Segment</th><th>Exposure</th><th>Claims</th><th>Premium (€)</th><th>Incurred (€)</th></tr></thead><tbody><tr><td>18–29</td><td>1,200</td><td>84</td><td>78,000</td><td>62,000</td></tr><tr><td>30–39</td><td>1,800</td><td>99</td><td>117,000</td><td>83,000</td></tr><tr><td>40–49</td><td>2,100</td><td>105</td><td>136,500</td><td>94,500</td></tr><tr><td>50–59</td><td>1,700</td><td>102</td><td>119,000</td><td>102,000</td></tr><tr><td>60–69</td><td>1,100</td><td>88</td><td>93,500</td><td>99,000</td></tr><tr><td>70+</td><td>700</td><td>70</td><td>66,500</td><td>91,000</td></tr></tbody></table></div>
+<div class="expected"><div class="metric"><b>8,600</b><span>Total exposures</span></div><div class="metric"><b>548</b><span>Total claims</span></div><div class="metric"><b>6.37%</b><span>Frequency / exposure</span></div><div class="metric"><b>€61.80</b><span>Incurred per exposure</span></div><div class="metric"><b>87.06%</b><span>Claims / premium ratio</span></div></div>
+<div class="formula">Frequency = claims / exposure · Incurred per exposure = incurred claims / exposure · Ratio = incurred claims / premium</div>
+<p class="meta">Important: the aggregate ratio is total incurred claims / total premium, not the simple average of segment ratios.</p></section>
+<section class="section" id="excel"><div class="sectionhead"><div><span class="tag">Tool 01 · Spreadsheet</span><h2>Excel — analyse and validate</h2></div><p>Goal: build an auditable table without programming.</p></div><div class="card"><h3>Guided exercise</h3><ol class="steps"><li>Open the CSV in Excel and convert the range into a table named <strong>DataTable</strong>.</li><li>Add three columns: frequency per 100 exposures, incurred per exposure and claims-to-premium ratio.</li><li>If the columns remain A:E, use the formulas below in the first data row and fill down.</li><li>Add a total row and calculate ratios from totals, never from a simple average of percentages.</li><li>Create a chart comparing incurred per exposure across segments and explain what it cannot establish.</li></ol><div class="formula">F2 = C2/B2*100 · G2 = E2/B2 · H2 = E2/D2</div><p class="meta">In an Excel table, prefer structured references such as =[@Claims]/[@Exposure]. Function names and separators may vary with Excel language and settings.</p></div></section>
+<section class="section" id="vba"><div class="sectionhead"><div><span class="tag">Tool 02 · Automation</span><h2>Excel VBA — repeat without errors</h2></div><p>Goal: generate an aggregate summary in one click, without automating a process before understanding it.</p></div><div class="card"><h3>Before running the macro</h3><ol class="steps"><li>In Excel, name the data worksheet <strong>Data</strong>.</li><li>Check columns A:E follow the CSV order and headers are in row 1.</li><li>Open the VBA editor, insert a standard module and paste the code.</li><li>Run <strong>BuildPortfolioSummary</strong>. The macro creates or clears the Summary worksheet.</li></ol><div class="codebox"><pre id="vba-code">Option Explicit
+
+Sub BuildPortfolioSummary()
+    Dim ws As Worksheet, out As Worksheet
+    Dim lastRow As Long, r As Long
+    Dim exposure As Double, claims As Double
+    Dim premium As Double, incurred As Double
+
+    Set ws = ThisWorkbook.Worksheets("Data")
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+
+    On Error Resume Next
+    Set out = ThisWorkbook.Worksheets("Summary")
+    On Error GoTo 0
+
+    If out Is Nothing Then
+        Set out = ThisWorkbook.Worksheets.Add(After:=ws)
+        out.Name = "Summary"
+    Else
+        out.Cells.Clear
+    End If
+
+    For r = 2 To lastRow
+        exposure = exposure + CDbl(ws.Cells(r, 2).Value)
+        claims = claims + CDbl(ws.Cells(r, 3).Value)
+        premium = premium + CDbl(ws.Cells(r, 4).Value)
+        incurred = incurred + CDbl(ws.Cells(r, 5).Value)
+    Next r
+
+    out.Range("A1").Value = "Portfolio indicator"
+    out.Range("B1").Value = "Value"
+    out.Range("A2").Value = "Exposure"
+    out.Range("B2").Value = exposure
+    out.Range("A3").Value = "Claims"
+    out.Range("B3").Value = claims
+    out.Range("A4").Value = "Frequency per 100 exposures"
+    out.Range("B4").Value = claims / exposure * 100
+    out.Range("A5").Value = "Premium (EUR)"
+    out.Range("B5").Value = premium
+    out.Range("A6").Value = "Incurred claims (EUR)"
+    out.Range("B6").Value = incurred
+    out.Range("A7").Value = "Incurred per exposure (EUR)"
+    out.Range("B7").Value = incurred / exposure
+    out.Range("A8").Value = "Loss ratio"
+    out.Range("B8").Value = incurred / premium
+    out.Range("B4").NumberFormat = "0.00"
+    out.Range("B5:B7").NumberFormat = "#,##0.00"
+    out.Range("B8").NumberFormat = "0.00%"
+    out.Columns("A:B").AutoFit
+End Sub</pre></div><button class="copy" data-copy="vba-code">Copy VBA code</button><p class="meta">Prerequisite: desktop Excel with macros enabled. Only enable macros from code whose provenance you trust. This code assumes valid numeric values and a non-empty portfolio; production code should handle these errors explicitly.</p></div></section>
+<section class="section" id="python"><div class="sectionhead"><div><span class="tag">Tool 03 · Programming</span><h2>Python — reproduce the analysis</h2></div><p>Goal: import data, calculate indicators and produce reproducible output with the standard library.</p></div><div class="card"><h3>Guided exercise</h3><ol class="steps"><li>Install Python 3 if needed.</li><li>Place the script at the repository root, where the <strong>data</strong> folder is accessible.</li><li>Run <strong>python workshop.py</strong>.</li><li>Then add a zero-division guard and checks for missing values.</li></ol><div class="codebox"><pre id="python-code">import csv
+from pathlib import Path
+
+file_path = Path("data/atelier-sinistres-synthetiques.csv")
+
+with file_path.open(newline="", encoding="utf-8") as file:
+    rows = list(csv.DictReader(file))
+
+exposure = sum(int(row["exposure"]) for row in rows)
+claims = sum(int(row["claims"]) for row in rows)
+premium = sum(float(row["premium_eur"]) for row in rows)
+incurred = sum(float(row["incurred_eur"]) for row in rows)
+
+print(f"Exposure: {exposure:,}")
+print(f"Claims: {claims:,}")
+print(f"Frequency per 100 exposures: {claims / exposure * 100:.2f}")
+print(f"Incurred per exposure: {incurred / exposure:.2f} EUR")
+print(f"Aggregate loss ratio: {incurred / premium:.2%}")
+
+for row in rows:
+    freq = int(row["claims"]) / int(row["exposure"]) * 100
+    print(row["segment"], f"{freq:.2f} claims per 100 exposures")</pre></div><button class="copy" data-copy="python-code">Copy Python code</button><p class="meta">Extension: reproduce the results with pandas, then add automated tests and a chart. The statistical calculation should remain understandable independently of the library.</p></div></section>
+<section class="section" id="r"><div class="sectionhead"><div><span class="tag">Tool 04 · Statistics</span><h2>R — explore and interpret</h2></div><p>Goal: perform the same calculations and extend the analysis to visualisation and diagnostics.</p></div><div class="card"><h3>Guided exercise</h3><ol class="steps"><li>Open RStudio at the project root or adjust the file path.</li><li>Import the CSV with <strong>read.csv</strong>.</li><li>Calculate aggregates and indicators by segment.</li><li>Compare results with Excel, VBA and Python.</li><li>Plot incurred per exposure and write a cautious interpretation.</li></ol><div class="codebox"><pre id="r-code">data <- read.csv(
+  "data/atelier-sinistres-synthetiques.csv",
+  stringsAsFactors = FALSE
+)
+
+total_exposure <- sum(data$exposure)
+total_claims <- sum(data$claims)
+total_premium <- sum(data$premium_eur)
+total_incurred <- sum(data$incurred_eur)
+
+cat("Exposure:", total_exposure, "\n")
+cat("Claims:", total_claims, "\n")
+cat("Frequency per 100 exposures:",
+    100 * total_claims / total_exposure, "\n")
+cat("Incurred per exposure:",
+    total_incurred / total_exposure, "EUR\n")
+cat("Aggregate loss ratio:",
+    total_incurred / total_premium, "\n")
+
+data$frequency_per_100 <- 100 * data$claims / data$exposure
+data$incurred_per_exposure <- data$incurred_eur / data$exposure
+data$loss_ratio <- data$incurred_eur / data$premium_eur
+
+print(data[, c("segment", "frequency_per_100",
+               "incurred_per_exposure", "loss_ratio")])
+
+barplot(data$incurred_per_exposure,
+        names.arg = data$segment,
+        xlab = "Segment",
+        ylab = "Incurred EUR per exposure",
+        main = "Synthetic portfolio comparison")</pre></div><button class="copy" data-copy="r-code">Copy R code</button><p class="meta">Extension: compare mean and median, study dispersion, document assumptions and produce a reproducible report with Quarto.</p></div></section>
+<section class="section"><div class="sectionhead"><div><span class="tag">Check your understanding</span><h2>What you should be able to explain</h2></div><p>The skill is not just obtaining the same numbers: it is knowing what they measure.</p></div><div class="card"><ol class="steps"><li>Why is the aggregate ratio not the simple average of segment ratios?</li><li>Why is claim frequency per exposure not necessarily an individual probability?</li><li>How would a mismeasured exposure affect segment comparisons?</li><li>Why is incurred per exposure not, by itself, a sufficient tariff pure premium?</li><li>What additional information would be needed before proposing a pricing change?</li></ol><p class="meta">Success criterion: you can calculate, validate, interpret and state at least two limitations of the analysis.</p></div></section>
+<div class="notice"><strong>Editorial status:</strong> first visible pilot workshop. Further specialist workshops, advanced exercises, ready-to-use Excel files and full projects will be added progressively after review. This page is a learning resource, not actuarial advice.</div>
+<a class="cta" href="../knowledge-map/">Explore the knowledge map ↗</a><a class="cta alt" href="../paths/">Return to learning paths ↗</a></main><footer><div class="wrap">ACTU-BASICS · Enlightening through numbers.</div></footer>
+<script>(()=>{'use strict';const root=document.documentElement;document.querySelector('#theme').addEventListener('click',()=>root.dataset.theme=root.dataset.theme==='dark'?'light':'dark');document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const text=document.getElementById(btn.dataset.copy).innerText;try{await navigator.clipboard.writeText(text);btn.textContent='Copied';}catch(e){btn.textContent='Select the code to copy it';}}));})();</script></body></html>
