@@ -167,7 +167,7 @@ test('French knowledge map loads concepts, filters relationships and links publi
 test('English knowledge map links to English published lessons', async ({ page }) => {
   await page.goto('en/knowledge-map/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('#nodes .node-btn')).toHaveCount(25);
+  await expect(page.locator('#nodes .node-btn')).toHaveCount(26);
   await page.locator('#nodes .node-btn').filter({ hasText: 'Fractions and proportions' }).click();
   await expect(page.locator('#detail a[href="../../en/lessons/M0-01/"]')).toBeVisible();
 });
