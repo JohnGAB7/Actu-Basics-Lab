@@ -21,6 +21,13 @@ Treize leçons disposent de pages web bilingues :
 
 Les pages A1.01, A2.01 et M0.01 intègrent des calculateurs ou simulateurs interactifs. Les pages M0.02, M0.03 et S1.04 à S1.07 présentent les séquences et narrations des scripts source, avec révélation interactive des corrections.
 
+### Ressources pédagogiques désormais visibles
+
+- **Parcours des fondations** : la page `parcours/` distingue les trois leçons M0 publiées des unités M1 (algèbre et fonctions) et M2 (analyse) encore au programme. Les liens et statuts ne présentent pas les unités futures comme des cours déjà disponibles.
+- **Carte interactive des connaissances** : `connaissances/` et `en/knowledge-map/` exposent un prototype de 26 nœuds et 32 relations. La carte filtre les relations, permet d'explorer les dépendances et renvoie vers les leçons disponibles dans le catalogue. Le graphe conserve le statut `design` et ne constitue pas encore un parcours approuvé ni un moteur de progression apprenant.
+- **Ateliers logiciels** : `ateliers/` et `en/workshops/` proposent un premier atelier bilingue avec un jeu de données d'assurance entièrement synthétique. Il comprend des exercices et des exemples exécutables pour Excel, Excel VBA, Python et R, ainsi qu'un CSV téléchargeable. Il s'agit d'un atelier pilote, pas encore d'une série complète de formations par outil.
+- Les deux ressources sont accessibles depuis la page d'accueil et les pages de parcours, en FR et EN.
+
 ## Catalogue pédagogique et statuts
 
 `data/catalogue.json` est extrait des sept fichiers de catalogue du programme de référence. Il contient **320 unités** avec titres, questions, modules, niveaux, durées indicatives, prérequis et références de provenance.
@@ -49,8 +56,8 @@ Les leçons A1.01 et A2.01 sont adaptées des scripts FR/EN validés par le prop
 
 Deux workflows GitHub Actions contrôlent le produit :
 
-- `.github/workflows/quality.yml` : structure HTML, titres, langue, viewport, identifiants, attributs `alt`, liens et fragments locaux, catalogue JSON, existence des routes publiées et recalculs mathématiques.
-- `.github/workflows/browser.yml` : tests Playwright sous Chromium pour la navigation, le catalogue et ses filtres, les calculateurs A1.01/M0.01, le simulateur binomial A2.01, les exercices S1.01/S1.05, les routes anglaises et l'affichage mobile.
+- `.github/workflows/quality.yml` : structure HTML, titres, langue, viewport, identifiants, attributs `alt`, liens et fragments locaux, catalogue JSON, existence des routes publiées, recalculs mathématiques et intégrité du graphe de connaissances.
+- `.github/workflows/browser.yml` : tests Playwright sous Chromium pour la navigation, le catalogue et ses filtres, les calculateurs A1.01/M0.01, le simulateur binomial A2.01, les exercices S1.01/S1.05, la carte de connaissances, les parcours M0–M2, les quatre ateliers logiciels, les routes anglaises et l'affichage mobile.
 
 Ces contrôles automatisés ne remplacent pas une revue visuelle multi-navigateurs, une validation manuelle approfondie au clavier ou une validation scientifique humaine.
 
