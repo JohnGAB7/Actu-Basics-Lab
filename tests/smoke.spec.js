@@ -190,11 +190,11 @@ test('French and English software workshops expose four practical tools and shar
 
 test('homepage exposes bilingual knowledge map and workshop destinations', async ({ page }) => {
   await page.goto('');
-  await expect(page.locator('a[data-fr-href="connaissances/"]')).toBeVisible();
-  await expect(page.locator('a[data-fr-href="ateliers/"]')).toBeVisible();
+  await expect(page.locator('#nav a[data-fr-href="connaissances/"]')).toBeVisible();
+  await expect(page.locator('#nav a[data-fr-href="ateliers/"]')).toBeVisible();
   await page.locator('#lang').click();
-  await expect(page.locator('a[data-fr-href="connaissances/"]')).toHaveAttribute('href', 'en/knowledge-map/');
-  await expect(page.locator('a[data-fr-href="ateliers/"]')).toHaveAttribute('href', 'en/workshops/');
+  await expect(page.locator('#nav a[data-fr-href="connaissances/"]')).toHaveAttribute('href', 'en/knowledge-map/');
+  await expect(page.locator('#nav a[data-fr-href="ateliers/"]')).toHaveAttribute('href', 'en/workshops/');
 });
 
 test('knowledge map and workshops remain usable on narrow mobile screens', async ({ page }) => {
@@ -212,11 +212,12 @@ test('foundation curriculum distinguishes published M0 lessons from planned M1 a
   for (const route of ['parcours/', 'en/paths/']) {
     await page.goto(route);
     await expect(page.locator('#fondations, #foundations')).toBeVisible();
-    await expect(page.locator('a[href="../lessons/M0-01/"]')).toBeVisible();
-    await expect(page.locator('a[href="../lessons/M0-02/"]')).toBeVisible();
-    await expect(page.locator('a[href="../lessons/M0-03/"]')).toBeVisible();
-    await expect(page.locator('#fondations, #foundations')).toContainText(route.startsWith('en/') ? '5 curriculum units' : '5 unités au programme');
-    await expect(page.locator('#fondations, #foundations')).toContainText(route.startsWith('en/') ? '3 curriculum units' : '3 unités au programme');
+    const section = page.locator(route.startsWith('en/') ? '#foundations' : '#fondations');
+    await expect(section.locator('a[href="../lessons/M0-01/"]')).toBeVisible();
+    await expect(section.locator('a[href="../lessons/M0-02/"]')).toBeVisible();
+    await expect(section.locator('a[href="../lessons/M0-03/"]')).toBeVisible();
+    await expect(section).toContainText(route.startsWith('en/') ? '5 curriculum units' : '5 unités au programme');
+    await expect(section).toContainText(route.startsWith('en/') ? '3 curriculum units' : '3 unités au programme');
   }
 });
 
