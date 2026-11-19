@@ -239,6 +239,13 @@
       "title_fr": "Audit exploratoire d'un jeu de données",
       "title_en": "Exploratory data audit",
       "stage": 3
+    },
+    {
+      "id": "tool.vba-automation",
+      "type": "tool_practice",
+      "title_fr": "Automatiser une analyse dans Excel VBA",
+      "title_en": "Automate an analysis with Excel VBA",
+      "stage": 3
     }
   ],
   "edges": [
@@ -396,6 +403,11 @@
       "from": "desc.spread",
       "to": "project.exploratory-audit",
       "type": "applies"
+    },
+    {
+      "from": "tool.excel-statistics",
+      "to": "tool.vba-automation",
+      "type": "continues_to"
     }
   ],
   "governance": {
