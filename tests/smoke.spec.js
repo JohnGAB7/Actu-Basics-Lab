@@ -147,3 +147,62 @@ test('learning path navigation and focus indicators work at desktop width', asyn
   const outline = await firstLink.evaluate(el => getComputedStyle(el).outlineStyle);
   expect(outline).not.toBe('none');
 });
+
+
+test('French knowledge map loads concepts, filters relationships and links published lessons', async ({ page }) => {
+  await page.goto('connaissances/');
+  await expect(page.locator('h1')).toContainText('La carte des connaissances');
+  await expect(page.locator('#nodes .node-btn')).toHaveCount(25);
+  const allEdges = await page.locator('#graph .edge').count();
+  expect(allEdges).toBeGreaterThan(0);
+  await page.locator('#relation').selectOption('requires');
+  const prerequisiteEdges = await page.locator('#graph .edge').count();
+  expect(prerequisiteEdges).toBeGreaterThan(0);
+  expect(prerequisiteEdges).toBeLessThan(allEdges);
+  await page.locator('#nodes .node-btn').filter({ hasText: 'Fractions et proportions' }).click();
+  await expect(page.locator('#detail')).toContainText('M0.01');
+  await expect(page.locator('#detail a[href="../lessons/M0-01/"]')).toBeVisible();
+});
+
+test('English knowledge map links to English published lessons', async ({ page }) => {
+  await page.goto('en/knowledge-map/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('#nodes .node-btn')).toHaveCount(25);
+  await page.locator('#nodes .node-btn').filter({ hasText: 'Fractions and proportions' }).click();
+  await expect(page.locator('#detail a[href="../../en/lessons/M0-01/"]')).toBeVisible();
+});
+
+test('French and English software workshops expose four practical tools and shared data', async ({ page }) => {
+  for (const route of ['ateliers/', 'en/workshops/']) {
+    await page.goto(route);
+    await expect(page.locator('h1')).toBeVisible();
+    await expect(page.locator('#excel')).toBeVisible();
+    await expect(page.locator('#vba')).toBeVisible();
+    await expect(page.locator('#python')).toBeVisible();
+    await expect(page.locator('#r')).toBeVisible();
+    await expect(page.locator('a[download]')).toHaveAttribute('href', route.startsWith('en/') ? '../../data/atelier-sinistres-synthetiques.csv' : '../data/atelier-sinistres-synthetiques.csv');
+    await expect(page.locator('pre#python-code')).toContainText('csv.DictReader');
+    await expect(page.locator('pre#r-code')).toContainText('read.csv');
+    await expect(page.locator('pre#vba-code')).toContainText('BuildPortfolioSummary');
+    await expect(page.locator('body')).toContainText(route.startsWith('en/') ? '87.06%' : '87,06 %');
+  }
+});
+
+test('homepage exposes bilingual knowledge map and workshop destinations', async ({ page }) => {
+  await page.goto('');
+  await expect(page.locator('a[data-fr-href="connaissances/"]')).toBeVisible();
+  await expect(page.locator('a[data-fr-href="ateliers/"]')).toBeVisible();
+  await page.locator('#lang').click();
+  await expect(page.locator('a[data-fr-href="connaissances/"]')).toHaveAttribute('href', 'en/knowledge-map/');
+  await expect(page.locator('a[data-fr-href="ateliers/"]')).toHaveAttribute('href', 'en/workshops/');
+});
+
+test('knowledge map and workshops remain usable on narrow mobile screens', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  for (const route of ['connaissances/', 'ateliers/', 'en/knowledge-map/', 'en/workshops/']) {
+    await page.goto(route);
+    await expect(page.locator('h1')).toBeVisible();
+    const width = await page.evaluate(() => document.documentElement.scrollWidth);
+    expect(width, 'horizontal overflow on ' + route).toBeLessThanOrEqual(375);
+  }
+});
