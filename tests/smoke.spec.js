@@ -152,7 +152,7 @@ test('learning path navigation and focus indicators work at desktop width', asyn
 test('French knowledge map loads concepts, filters relationships and links published lessons', async ({ page }) => {
   await page.goto('connaissances/');
   await expect(page.locator('h1')).toContainText('La carte des connaissances');
-  await expect(page.locator('#nodes .node-btn')).toHaveCount(25);
+  await expect(page.locator('#nodes .node-btn')).toHaveCount(26);
   const allEdges = await page.locator('#graph .edge').count();
   expect(allEdges).toBeGreaterThan(0);
   await page.locator('#relation').selectOption('requires');
@@ -205,4 +205,23 @@ test('knowledge map and workshops remain usable on narrow mobile screens', async
     const width = await page.evaluate(() => document.documentElement.scrollWidth);
     expect(width, 'horizontal overflow on ' + route).toBeLessThanOrEqual(375);
   }
+});
+
+
+test('foundation curriculum distinguishes published M0 lessons from planned M1 and M2 units', async ({ page }) => {
+  for (const route of ['parcours/', 'en/paths/']) {
+    await page.goto(route);
+    await expect(page.locator('#fondations, #foundations')).toBeVisible();
+    await expect(page.locator('a[href="../lessons/M0-01/"]')).toBeVisible();
+    await expect(page.locator('a[href="../lessons/M0-02/"]')).toBeVisible();
+    await expect(page.locator('a[href="../lessons/M0-03/"]')).toBeVisible();
+    await expect(page.locator('#fondations, #foundations')).toContainText(route.startsWith('en/') ? '5 curriculum units' : '5 unités au programme');
+    await expect(page.locator('#fondations, #foundations')).toContainText(route.startsWith('en/') ? '3 curriculum units' : '3 unités au programme');
+  }
+});
+
+test('VBA automation is represented in the knowledge graph', async ({ page }) => {
+  await page.goto('connaissances/');
+  await page.locator('#nodes .node-btn').filter({ hasText: 'Automatiser une analyse dans Excel VBA' }).click();
+  await expect(page.locator('#detail')).toContainText('tool_practice');
 });
