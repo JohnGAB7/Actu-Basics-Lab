@@ -1,0 +1,120 @@
+<!doctype html><html lang="fr" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ateliers pratiques Excel, VBA, Python et R pour l'analyse statistique et actuarielle."><title>Ateliers logiciels · ACTU-BASICS</title><style>
+:root{--paper:#f7f5ef;--surface:#fffefa;--soft:#eeece4;--ink:#183b3b;--muted:#647774;--line:#deded2;--teal:#176b67;--deep:#104b49;--gold:#8a672e;--serif:Georgia,serif;--sans:Inter,system-ui,sans-serif}[data-theme=dark]{color-scheme:dark;--paper:#142624;--surface:#203632;--soft:#1c322f;--ink:#f1f0e8;--muted:#aabbb2;--line:#38514b;--teal:#80b9aa;--deep:#a1cbbd;--gold:#d7b775}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--sans)}a{color:inherit}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}header{background:var(--surface);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:850;letter-spacing:.12em;font-size:12px;text-decoration:none}.navlinks{display:flex;gap:18px;font-size:12px;color:var(--muted)}.tool{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px}.hero{background:var(--deep);color:#fff;padding:52px 0}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#e4d2a9}.hero h1{font:500 clamp(38px,5vw,58px)/1.05 var(--serif);margin:14px 0}.hero p{max-width:790px;color:#e0e9e2}.main{padding:34px 0 80px}.notice{padding:17px 20px;background:var(--soft);border-left:4px solid var(--gold);font-size:13px;margin-bottom:24px}.introgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 36px}.intro{background:var(--surface);border:1px solid var(--line);padding:16px}.intro b{display:block;font:26px var(--serif);color:var(--teal)}.intro span{font-size:11px;color:var(--muted)}.section{margin:38px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:18px}.sectionhead h2{font:32px var(--serif);margin:5px 0}.tag{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);font-weight:850}.sectionhead p{max-width:520px;color:var(--muted);font-size:12px;margin:0}.card{background:var(--surface);border:1px solid var(--line);padding:22px;margin:14px 0}.card h3{font:23px var(--serif);margin:0 0 8px}.card p{color:var(--muted);font-size:13px}.steps{padding-left:22px;font-size:13px}.steps li{margin:7px 0}.formula{background:var(--soft);padding:12px 14px;font:13px ui-monospace,monospace;overflow-x:auto}.codebox{background:#172c29;color:#edf2ec;padding:16px;overflow-x:auto;border-radius:3px;margin:12px 0}.codebox pre{margin:0;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}.copy{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 12px;font-size:11px;cursor:pointer}.meta{font-size:11px;color:var(--muted)}.expected{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.metric{padding:12px 14px;background:var(--soft);min-width:150px}.metric b{display:block;font:22px var(--serif)}.metric span{font-size:10px;color:var(--muted)}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px;background:var(--surface)}th,td{border:1px solid var(--line);padding:9px;text-align:right}th:first-child,td:first-child{text-align:left}th{background:var(--soft)}.cta{display:inline-block;padding:12px 16px;background:var(--deep);color:#fff;text-decoration:none;font-weight:750;font-size:12px;margin:6px 8px 6px 0}.cta.alt{background:var(--soft);color:var(--ink)}footer{background:var(--deep);color:#e4ece6;padding:24px 0;font-size:11px}@media(max-width:850px){.introgrid{grid-template-columns:1fr 1fr}.sectionhead{display:block}.sectionhead p{margin-top:8px}}@media(max-width:650px){.navlinks{display:none}.introgrid{grid-template-columns:1fr 1fr}.card{padding:15px}.wrap{width:calc(100% - 28px)}}:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+</style></head><body><header><div class="wrap nav"><a class="brand" href="../index.html">∑ ACTU-BASICS</a><nav class="navlinks" aria-label="Navigation principale"><a href="../parcours/">Parcours</a><a href="../connaissances/">Carte des connaissances</a><a href="./" aria-current="page">Ateliers logiciels</a><a href="../bibliotheque/">Bibliothèque</a></nav><div><a class="tool" href="../en/workshops/">EN</a> <button class="tool" id="theme" type="button">◐ Thème</button></div></div></header>
+<section class="hero"><div class="wrap"><span class="eyebrow">Apprendre en construisant</span><h1>Quatre outils.<br>Une même exigence de raisonnement.</h1><p>Un premier atelier commun pour analyser un portefeuille fictif de sinistres. Tu vas résoudre le même problème avec Excel, automatiser une synthèse avec VBA, puis reproduire l'analyse avec Python et R.</p></div></section>
+<main class="wrap main"><div class="notice"><strong>Atelier pilote — jeu de données entièrement synthétique.</strong> Les chiffres sont fabriqués pour l'apprentissage. Ils ne représentent ni un assureur, ni une population réelle, ni une recommandation tarifaire. L'objectif est de comprendre les indicateurs et de vérifier qu'ils concordent entre outils.</div>
+<div class="introgrid"><div class="intro"><b>01</b><span>Importer et contrôler les données</span></div><div class="intro"><b>02</b><span>Calculer fréquence et coûts</span></div><div class="intro"><b>03</b><span>Comparer les résultats</span></div><div class="intro"><b>04</b><span>Expliquer les limites</span></div></div>
+<section class="section"><div class="sectionhead"><div><span class="tag">Données communes</span><h2>Un mini-portefeuille d'assurance</h2></div><p>Six segments fictifs. Chaque ligne contient l'exposition, le nombre de sinistres, la prime acquise et le coût des sinistres.</p></div>
+<p><a class="cta" href="../data/atelier-sinistres-synthetiques.csv" download>Télécharger le CSV ↧</a><span class="meta">Fichier UTF-8 · séparateur virgule · montants en euros</span></p>
+<div class="tablewrap"><table><thead><tr><th>Segment</th><th>Exposition</th><th>Sinistres</th><th>Prime (€)</th><th>Coût (€)</th></tr></thead><tbody><tr><td>18–29</td><td>1 200</td><td>84</td><td>78 000</td><td>62 000</td></tr><tr><td>30–39</td><td>1 800</td><td>99</td><td>117 000</td><td>83 000</td></tr><tr><td>40–49</td><td>2 100</td><td>105</td><td>136 500</td><td>94 500</td></tr><tr><td>50–59</td><td>1 700</td><td>102</td><td>119 000</td><td>102 000</td></tr><tr><td>60–69</td><td>1 100</td><td>88</td><td>93 500</td><td>99 000</td></tr><tr><td>70+</td><td>700</td><td>70</td><td>66 500</td><td>91 000</td></tr></tbody></table></div>
+<div class="expected"><div class="metric"><b>8 600</b><span>Expositions totales</span></div><div class="metric"><b>548</b><span>Sinistres totaux</span></div><div class="metric"><b>6,37 %</b><span>Fréquence / exposition</span></div><div class="metric"><b>61,80 €</b><span>Coût moyen par exposition</span></div><div class="metric"><b>87,06 %</b><span>Ratio sinistres / primes</span></div></div>
+<div class="formula">Fréquence = sinistres / exposition · Coût moyen = coût des sinistres / exposition · Ratio = coût des sinistres / primes</div>
+<p class="meta">Attention : le ratio agrégé se calcule comme somme des coûts / somme des primes, et non comme moyenne simple des ratios par segment.</p></section>
+<section class="section" id="excel"><div class="sectionhead"><div><span class="tag">Outil 01 · Tableur</span><h2>Excel — analyser et contrôler</h2></div><p>Objectif : construire un tableau vérifiable sans programmation.</p></div><div class="card"><h3>Exercice guidé</h3><ol class="steps"><li>Ouvre le CSV dans Excel et transforme la plage en tableau nommé <strong>Donnees</strong>.</li><li>Ajoute trois colonnes : fréquence pour 100 expositions, coût par exposition et ratio sinistres/primes.</li><li>Sur la première ligne de données, si les colonnes restent A:E, utilise les formules ci-dessous, puis recopie-les.</li><li>Ajoute une ligne de total et calcule les ratios à partir des totaux, jamais par moyenne simple des pourcentages.</li><li>Crée un graphique comparant le coût par exposition entre segments et explique ce qu'il ne permet pas de conclure.</li></ol><div class="formula">F2 = C2/B2*100 · G2 = E2/B2 · H2 = E2/D2</div><p class="meta">Dans un tableau Excel structuré, préfère les références structurées, par exemple =[@Sinistres]/[@Exposition]. Les noms de fonctions et séparateurs peuvent varier selon la langue et la configuration d'Excel.</p></div></section>
+<section class="section" id="vba"><div class="sectionhead"><div><span class="tag">Outil 02 · Automatisation</span><h2>Excel VBA — répéter sans erreur</h2></div><p>Objectif : générer une synthèse agrégée en un clic, sans automatiser prématurément un processus mal compris.</p></div><div class="card"><h3>Avant de lancer la macro</h3><ol class="steps"><li>Dans Excel, nomme la feuille contenant les données <strong>Data</strong>.</li><li>Vérifie que les colonnes A:E suivent l'ordre du CSV et que les en-têtes sont sur la ligne 1.</li><li>Ouvre l'éditeur VBA, insère un module standard et colle le code.</li><li>Lance <strong>BuildPortfolioSummary</strong>. La macro crée ou remplace le contenu de la feuille Summary.</li></ol><div class="codebox"><pre id="vba-code">Option Explicit
+
+Sub BuildPortfolioSummary()
+    Dim ws As Worksheet, out As Worksheet
+    Dim lastRow As Long, r As Long
+    Dim exposure As Double, claims As Double
+    Dim premium As Double, incurred As Double
+
+    Set ws = ThisWorkbook.Worksheets("Data")
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+
+    On Error Resume Next
+    Set out = ThisWorkbook.Worksheets("Summary")
+    On Error GoTo 0
+
+    If out Is Nothing Then
+        Set out = ThisWorkbook.Worksheets.Add(After:=ws)
+        out.Name = "Summary"
+    Else
+        out.Cells.Clear
+    End If
+
+    For r = 2 To lastRow
+        exposure = exposure + CDbl(ws.Cells(r, 2).Value)
+        claims = claims + CDbl(ws.Cells(r, 3).Value)
+        premium = premium + CDbl(ws.Cells(r, 4).Value)
+        incurred = incurred + CDbl(ws.Cells(r, 5).Value)
+    Next r
+
+    out.Range("A1").Value = "Portfolio indicator"
+    out.Range("B1").Value = "Value"
+    out.Range("A2").Value = "Exposure"
+    out.Range("B2").Value = exposure
+    out.Range("A3").Value = "Claims"
+    out.Range("B3").Value = claims
+    out.Range("A4").Value = "Frequency per 100 exposures"
+    out.Range("B4").Value = claims / exposure * 100
+    out.Range("A5").Value = "Premium (EUR)"
+    out.Range("B5").Value = premium
+    out.Range("A6").Value = "Incurred claims (EUR)"
+    out.Range("B6").Value = incurred
+    out.Range("A7").Value = "Incurred per exposure (EUR)"
+    out.Range("B7").Value = incurred / exposure
+    out.Range("A8").Value = "Loss ratio"
+    out.Range("B8").Value = incurred / premium
+    out.Range("B4").NumberFormat = "0.00"
+    out.Range("B5:B7").NumberFormat = "#,##0.00"
+    out.Range("B8").NumberFormat = "0.00%"
+    out.Columns("A:B").AutoFit
+End Sub</pre></div><button class="copy" data-copy="vba-code">Copier le code VBA</button><p class="meta">Prérequis : Excel de bureau avec macros activées. N'active les macros que pour du code dont tu connais la provenance. Le code suppose des valeurs numériques valides et un portefeuille non vide ; une version de production devrait gérer explicitement ces erreurs.</p></div></section>
+<section class="section" id="python"><div class="sectionhead"><div><span class="tag">Outil 03 · Programmation</span><h2>Python — reproduire l'analyse</h2></div><p>Objectif : importer les données, calculer des indicateurs et produire une sortie reproductible avec la bibliothèque standard.</p></div><div class="card"><h3>Exercice guidé</h3><ol class="steps"><li>Installe Python 3 si nécessaire.</li><li>Place le script à la racine du dépôt, où le dossier <strong>data</strong> est accessible.</li><li>Exécute <strong>python atelier.py</strong>.</li><li>Ajoute ensuite un contrôle empêchant une division par zéro et une vérification des valeurs manquantes.</li></ol><div class="codebox"><pre id="python-code">import csv
+from pathlib import Path
+
+file_path = Path("data/atelier-sinistres-synthetiques.csv")
+
+with file_path.open(newline="", encoding="utf-8") as file:
+    rows = list(csv.DictReader(file))
+
+exposure = sum(int(row["exposure"]) for row in rows)
+claims = sum(int(row["claims"]) for row in rows)
+premium = sum(float(row["premium_eur"]) for row in rows)
+incurred = sum(float(row["incurred_eur"]) for row in rows)
+
+print(f"Exposure: {exposure:,}")
+print(f"Claims: {claims:,}")
+print(f"Frequency per 100 exposures: {claims / exposure * 100:.2f}")
+print(f"Incurred per exposure: {incurred / exposure:.2f} EUR")
+print(f"Aggregate loss ratio: {incurred / premium:.2%}")
+
+for row in rows:
+    freq = int(row["claims"]) / int(row["exposure"]) * 100
+    print(row["segment"], f"{freq:.2f} claims per 100 exposures")</pre></div><button class="copy" data-copy="python-code">Copier le code Python</button><p class="meta">Prolongement : reproduis les résultats avec pandas, puis ajoute des tests automatisés et un graphique. Le calcul statistique doit rester compréhensible indépendamment de la bibliothèque utilisée.</p></div></section>
+<section class="section" id="r"><div class="sectionhead"><div><span class="tag">Outil 04 · Statistique</span><h2>R — explorer et interpréter</h2></div><p>Objectif : effectuer les mêmes calculs et prolonger l'analyse vers la visualisation et les diagnostics.</p></div><div class="card"><h3>Exercice guidé</h3><ol class="steps"><li>Ouvre RStudio à la racine du projet ou adapte le chemin du fichier.</li><li>Importe le CSV avec <strong>read.csv</strong>.</li><li>Calcule les agrégats et les indicateurs par segment.</li><li>Compare les résultats à Excel, VBA et Python.</li><li>Trace le coût par exposition et formule une interprétation prudente.</li></ol><div class="codebox"><pre id="r-code">data <- read.csv(
+  "data/atelier-sinistres-synthetiques.csv",
+  stringsAsFactors = FALSE
+)
+
+total_exposure <- sum(data$exposure)
+total_claims <- sum(data$claims)
+total_premium <- sum(data$premium_eur)
+total_incurred <- sum(data$incurred_eur)
+
+cat("Exposure:", total_exposure, "\n")
+cat("Claims:", total_claims, "\n")
+cat("Frequency per 100 exposures:",
+    100 * total_claims / total_exposure, "\n")
+cat("Incurred per exposure:",
+    total_incurred / total_exposure, "EUR\n")
+cat("Aggregate loss ratio:",
+    total_incurred / total_premium, "\n")
+
+data$frequency_per_100 <- 100 * data$claims / data$exposure
+data$incurred_per_exposure <- data$incurred_eur / data$exposure
+data$loss_ratio <- data$incurred_eur / data$premium_eur
+
+print(data[, c("segment", "frequency_per_100",
+               "incurred_per_exposure", "loss_ratio")])
+
+barplot(data$incurred_per_exposure,
+        names.arg = data$segment,
+        xlab = "Segment",
+        ylab = "Incurred EUR per exposure",
+        main = "Synthetic portfolio comparison")</pre></div><button class="copy" data-copy="r-code">Copier le code R</button><p class="meta">Prolongement : comparer moyenne et médiane, étudier la dispersion, documenter les hypothèses et produire un rapport reproductible avec Quarto.</p></div></section>
+<section class="section"><div class="sectionhead"><div><span class="tag">Validation des acquis</span><h2>Ce que tu dois pouvoir expliquer</h2></div><p>La compétence n'est pas seulement d'obtenir les mêmes chiffres : il faut savoir ce qu'ils mesurent.</p></div><div class="card"><ol class="steps"><li>Pourquoi le ratio agrégé n'est-il pas la moyenne simple des ratios par segment ?</li><li>Pourquoi une fréquence de sinistres par exposition n'est-elle pas nécessairement une probabilité individuelle ?</li><li>Quel effet aurait une exposition mal mesurée sur la comparaison des segments ?</li><li>Pourquoi le coût par exposition n'est-il pas, à lui seul, une prime pure tarifaire suffisante ?</li><li>Quelles informations supplémentaires faudrait-il avant de proposer une modification de tarif ?</li></ol><p class="meta">Critère de réussite : tu sais calculer, vérifier, interpréter et citer au moins deux limites de l'analyse.</p></div></section>
+<div class="notice"><strong>Statut éditorial :</strong> premier atelier pilote visible. Les autres ateliers spécialisés, les exercices de niveau supérieur, les fichiers Excel prêts à l'emploi et les projets complets seront ajoutés progressivement après vérification. Cette page est une ressource d'apprentissage, pas un avis actuariel.</div>
+<a class="cta" href="../connaissances/">Explorer la carte des connaissances ↗</a><a class="cta alt" href="../parcours/">Revenir aux parcours ↗</a></main><footer><div class="wrap">ACTU-BASICS · Éveiller par les chiffres.</div></footer>
+<script>(()=>{'use strict';const root=document.documentElement;document.querySelector('#theme').addEventListener('click',()=>root.dataset.theme=root.dataset.theme==='dark'?'light':'dark');document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const text=document.getElementById(btn.dataset.copy).innerText;try{await navigator.clipboard.writeText(text);btn.textContent='Copié';}catch(e){btn.textContent='Sélectionne le code pour le copier';}}));})();</script></body></html>
