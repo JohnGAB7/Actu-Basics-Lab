@@ -64,7 +64,7 @@ Une quantité x est convertie en une unité cible par k(x)=1,25x. Un tarif est e
 3. Déterminer l'antécédent de 26 par la fonction composée (3 pts).
 4. Interpréter la pente et l'ordonnée à l'origine avec leurs unités si x est en unités sources et t en euros (3 pts).
 
-## Partie G — Cas intégré : lecture critique d'un portefeuille (14 points)
+## Partie G — Cas intégré : lecture critique d'un portefeuille (16 points)
 
 Deux périodes sont observées :
 
@@ -77,7 +77,8 @@ Deux périodes sont observées :
 1. Calculer les fréquences observées des deux périodes et leur variation relative (5 pts).
 2. Calculer la charge de sinistres de chaque période et sa variation relative (4 pts).
 3. Décomposer exactement la variation de charge en effet nombre de sinistres puis effet coût moyen, en utilisant les valeurs de période 1 comme point de départ (3 pts).
-4. Citer deux limites qui empêchent d'interpréter ces résultats comme une preuve causale ou une tendance durable (2 pts).
+4. Construire un indice de charge base 100 en période 1 (2 pts).
+5. Citer deux limites qui empêchent d'interpréter ces résultats comme une preuve causale ou une tendance durable (2 pts).
 
 ## Règles de notation transversales
 
