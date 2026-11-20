@@ -35,3 +35,17 @@ L'apprenant doit savoir classer les nombres, manipuler fractions et pourcentages
 - [Progression et critères de maîtrise](PROGRESSION-ET-CRITERES.md)
 - [Formulaire de synthèse](FORMULAIRE.md)
 - [Plan d'évaluation](PLAN-EVALUATION.md)
+
+## Approfondissements universitaires
+Chaque cours dispose désormais d'un complément de rigueur : démonstrations, conditions d'application, contre-exemples, interprétations et exercices de raisonnement.
+
+- [F01 — Nombres et numération](F01-APPROFONDISSEMENT.md)
+- [F02 — Fractions et proportions](F02-APPROFONDISSEMENT.md)
+- [F03 — Pourcentages et indices](F03-APPROFONDISSEMENT.md)
+- [F04 — Puissances et logarithmes](F04-APPROFONDISSEMENT.md)
+- [F05 — Algèbre](F05-APPROFONDISSEMENT.md)
+- [F06 — Équations et systèmes](F06-APPROFONDISSEMENT.md)
+- [F07 — Fonctions](F07-APPROFONDISSEMENT.md)
+- [F08 — Repères, graphiques et unités](F08-APPROFONDISSEMENT.md)
+- [16 problèmes avancés](PROBLEMES-AVANCES.md)
+- [Corrigés des problèmes avancés](CORRIGES-AVANCES.md)
