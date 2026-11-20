@@ -54,13 +54,14 @@ document.getElementById('levels').innerHTML=t.levels.map((v,i)=>'<article class=
 document.getElementById('method').innerHTML=t.methods.map(v=>'<article><div class="eyebrow" style="color:var(--gold)">'+v[0]+'</div><h3>'+v[1]+'</h3><p>'+v[2]+'</p></article>').join('');
 const levelOf=m=>m<=3?1:m<=5?2:m<=8?3:m<=12?4:5;
 let entries=[],modules={};
+const projectRoot=location.pathname.includes('/Actu-Basics-Lab/')?'/Actu-Basics-Lab/':'/';
 const root=location.pathname.includes('/en/statistics/')?'../../':'../';
-fetch(root+'data/catalogue.json').then(r=>{if(!r.ok)throw Error('catalogue unavailable');return r.json()}).then(data=>{
+fetch(projectRoot+'data/catalogue.json').then(r=>{if(!r.ok)throw Error('catalogue unavailable');return r.json()}).then(data=>{
 entries=data.entries.filter(e=>/^S\d+\.\d+$/.test(e.id));
 document.getElementById('topicCount').textContent=entries.length;
 entries.forEach(e=>{(modules[e.module]??=[]).push(e)});
 render();
-}).catch(()=>{document.getElementById('results').textContent=english?'The curriculum catalogue could not be loaded.':'Le catalogue pédagogique n’a pas pu être chargé.'});
+}).catch(error=>{document.getElementById('results').textContent=(english?'The curriculum catalogue could not be loaded: ':'Le catalogue pédagogique n’a pas pu être chargé : ')+String(error);});
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function render(){
 const q=document.getElementById('search').value.trim().toLocaleLowerCase();
