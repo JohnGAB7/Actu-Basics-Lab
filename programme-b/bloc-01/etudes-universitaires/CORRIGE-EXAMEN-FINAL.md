@@ -202,7 +202,7 @@ L'antécédent est 20 unités sources.
 
 La pente vaut 1 euro par unité source ; l'ordonnée à l'origine vaut 6 euros, correspondant au forfait. Les unités rendent l'interprétation économique explicite.
 
-## Partie G — Cas intégré (14 points)
+## Partie G — Cas intégré (16 points)
 
 ### 1. Fréquences (5 pts)
 
@@ -246,7 +246,15 @@ Total : 8 500+1 300=9 800 €, égal à 33 800−24 000.
 
 Cette décomposition est exacte mais dépend de l'ordre choisi. Avec l'ordre inverse, l'effet d'interaction est attribué différemment.
 
-### 4. Limites (2 pts)
+### 4. Indice base 100 (2 pts)
+
+Période 1 = 100. Période 2 :
+\[
+100\times\frac{33800}{24000}=140,8333.
+\]
+L'indice indique une hausse de charge de 40,83 % entre les deux périodes.
+
+### 5. Limites (2 pts)
 
 Réponses possibles : seulement deux périodes ; absence de segmentation ; variation du mix ; définition des sinistres susceptible de changer ; absence d'intervalle d'incertitude ; événements exceptionnels ; données agrégées qui masquent l'hétérogénéité. Deux limites distinctes sont attendues.
 
@@ -262,7 +270,7 @@ Réponses possibles : seulement deux périodes ; absence de segmentation ; varia
 | D | Modèles exponentiels et logarithmes | 14 |
 | E | Algèbre et résolution | 18 |
 | F | Fonctions et composition | 12 |
-| G | Synthèse quantitative et esprit critique | 14 |
+| G | Synthèse quantitative et esprit critique | 16 |
 | **Total** |  | **100** |
 
 ## Interprétation pédagogique indicative
