@@ -63,5 +63,7 @@ Une série de dossiers approfondit les huit cours par des démonstrations, des e
 - [Diagnostic et remédiation](etudes-universitaires/DIAGNOSTIC-ET-REMEDIATION.md)
 - [Passerelle vers l'analyse mathématique](etudes-universitaires/PASSERELLE-ANALYSE-FONDAMENTALE.md)
 - [Exercices et corrigés de la passerelle](etudes-universitaires/EXERCICES-PASSERELLE-ANALYSE.md)
+- [Complétude de R, supremum et Cauchy](etudes-universitaires/COMPLETUDE-REELS-SUPREMUM-CAUCHY.md)
+- [Exercices et corrigés sur la complétude](etudes-universitaires/EXERCICES-COMPLETUDE-REELS.md)
 
-La passerelle est une extension préparatoire du Bloc 1, non l'ouverture du Bloc 2. Elle couvre logique, démonstrations, suites réelles, limites et continuité ; dérivées et intégrales restent hors périmètre.
+La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les dérivées et intégrales restent hors périmètre.
