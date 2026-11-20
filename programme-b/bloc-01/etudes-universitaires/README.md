@@ -29,6 +29,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Exercices et corrigés de la passerelle](EXERCICES-PASSERELLE-ANALYSE.md) | 16 exercices progressifs et problèmes de synthèse |
 | [Complétude de R, supremum et Cauchy](COMPLETUDE-REELS-SUPREMUM-CAUCHY.md) | Structure ordonnée, propriété de la borne supérieure, densité et complétude |
 | [Exercices sur la complétude](EXERCICES-COMPLETUDE-REELS.md) | 16 exercices et corrigés détaillés |
+| [Suites et séries numériques](SUITES-SERIES-CONVERGENCE.md) | Sous-suites, Bolzano–Weierstrass, séries, critères et convergence absolue/conditionnelle |
+| [Exercices corrigés — suites et séries](EXERCICES-SUITES-SERIES.md) | 20 exercices progressifs avec solutions détaillées |
 
 ## Modalités de travail recommandées
 
@@ -63,6 +65,3 @@ Les dossiers F01–F08 proposent un approfondissement de niveau universitaire in
 Toute réponse doit distinguer : données, hypothèses, définition du modèle, calcul, résultat, interprétation et limites. Une valeur numérique correcte obtenue par un raisonnement invalide ne vaut pas validation complète.
 
 Les seuils de notation figurant dans les documents sont des conventions pédagogiques proposées pour ce cursus, et non des normes académiques universelles.
-
-| [Suites et séries numériques](SUITES-SERIES-CONVERGENCE.md) | Sous-suites, Bolzano–Weierstrass, séries, critères et convergence absolue/conditionnelle |
-| [Exercices corrigés — suites et séries](EXERCICES-SUITES-SERIES.md) | 20 exercices progressifs avec solutions détaillées |
