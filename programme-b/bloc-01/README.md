@@ -61,4 +61,7 @@ Une série de dossiers approfondit les huit cours par des démonstrations, des e
 - [Feuille de réponses vierge](etudes-universitaires/FEUILLE-REPONSES-EXAMEN.md)
 - [Corrigé de l'examen](etudes-universitaires/CORRIGE-EXAMEN-FINAL.md)
 - [Diagnostic et remédiation](etudes-universitaires/DIAGNOSTIC-ET-REMEDIATION.md)
+- [Passerelle vers l'analyse mathématique](etudes-universitaires/PASSERELLE-ANALYSE-FONDAMENTALE.md)
+- [Exercices et corrigés de la passerelle](etudes-universitaires/EXERCICES-PASSERELLE-ANALYSE.md)
 
+La passerelle est une extension préparatoire du Bloc 1, non l'ouverture du Bloc 2. Elle couvre logique, démonstrations, suites réelles, limites et continuité ; dérivées et intégrales restent hors périmètre.
