@@ -28,7 +28,7 @@ Le taux continu \(r\) vérifie \(e^r=1,06\), donc \(r=\ln(1,06)\approx0,05827\),
 \(f(x)=((x-2)(x+2))/(x(x-2))\). Le domaine initial exclut 0 et 2. Pour \(x\ne0,2\), \(f(x)=(x+2)/x\). La valeur 2 reste exclue même si le facteur s'est simplifié.
 
 ## 10. Modèle de seuil
-\(R(q)=-2(q^2-40q+250)\). Les racines sont \(q=20\pm5\sqrt{14}\), environ 7,753 et 32,247. Comme le coefficient dominant est négatif, \(R(q)>0\) entre les deux racines. Si \(q\) est une quantité non négative, cet intervalle est économiquement admissible ; l'interprétation dépend toutefois du domaine réel du modèle.
+\(R(q)=-2(q^2-40q+250)\). Les racines sont \(q=20\pm5\sqrt{6}\), environ 7,753 et 32,247. Comme le coefficient dominant est négatif, \(R(q)>0\) entre les deux racines. Si \(q\) est une quantité non négative, cet intervalle est économiquement admissible ; l'interprétation dépend toutefois du domaine réel du modèle.
 
 ## 11. Système de tarification
 \(3A+2B=190\), \(2A+5B=260\). Multiplier la première équation par 5 et la seconde par 2 : \(15A+10B=950\), \(4A+10B=520\). Soustraction : \(11A=430\), donc \(A=430/11\approx39,09\). Puis \(B=(190-3A)/2=\,?\) En remplaçant exactement : \(B= (190-1290/11)/2=400/11\approx36,36\). Vérification : \(3(430/11)+2(400/11)=2090/11=190\) et \(2(430/11)+5(400/11)=2860/11=260\).
