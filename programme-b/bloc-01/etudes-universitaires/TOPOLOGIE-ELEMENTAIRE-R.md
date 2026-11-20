@@ -230,11 +230,21 @@ Conséquences :
 
 **Attention :** fermé seul ne suffit pas, borné seul ne suffit pas.
 
-### 7.3 Idée de preuve : compact implique fermé et borné
+### 7.3 Démonstration guidée du théorème de Heine–Borel
 
-Si K n'était pas borné, les ouverts (-n,n), n≥1, formeraient un recouvrement de K sans sous-recouvrement fini.
+*Sens compact ⇒ borné.* Si K n'était pas borné, la famille d'ouverts U_n=(-n,n), n≥1, recouvrirait K. Aucun sous-ensemble fini de cette famille ne couvrirait K : une famille finie a un plus grand indice N et son union est (-N,N), alors que K n'est pas borné. Contradiction avec la compacité.
 
-Si K n'était pas fermé, il existerait une suite de points de K convergeant vers x hors de K. En utilisant des voisinages adaptés de chaque point de K et du point limite extérieur, on construirait un recouvrement ouvert sans sous-recouvrement fini. La démonstration formelle peut aussi être obtenue à partir de Bolzano–Weierstrass et de la caractérisation séquentielle de la compacité dans R.
+*Sens compact ⇒ fermé.* Dans tout espace métrique, un compact est fermé. Sur R, soit x hors de K. Pour chaque y dans K, posons r_y=|x-y|/3>0. Les boules B(y,r_y) couvrent K. Par compacité, un nombre fini d'entre elles suffit. Le minimum des rayons correspondants est strictement positif ; une boule suffisamment petite centrée en x est disjointe de chacune de ces boules et donc de K. Le complémentaire de K est ouvert.
+
+*Sens fermé et borné ⇒ compact.* Soit K fermé et borné, et soit (U_i) un recouvrement ouvert de K. Choisissons a≤b tels que K⊂[a,b]. Ajoutons l'ouvert R\K à la famille : elle recouvre alors [a,b]. Il suffit de montrer qu'un intervalle fermé [a,b] possède un sous-recouvrement fini.
+
+Posons
+\[
+E=\{x\in[a,b]:[a,x]\text{ est couvert par un nombre fini d'ouverts de la famille}\}.
+\]
+L'ensemble E n'est pas vide : un ouvert contenant a contient aussi un petit intervalle à droite de a. Posons c=sup E. Un ouvert de la famille contient c ; il contient donc un intervalle autour de c. Par la définition du supremum, on peut choisir x dans E assez proche de c par la gauche. Un nombre fini d'ouverts couvre [a,x], et l'ouvert contenant c couvre le segment restant jusqu'à un point strictement supérieur à c si c<b. Cela contredit la définition de c. Donc c=b. Le même argument au voisinage de b donne un recouvrement fini de [a,b]. Ainsi K possède un sous-recouvrement fini.
+
+Cette preuve utilise la propriété de la borne supérieure de R. Elle explicite le lien profond entre complétude et compacité.
 
 ### 7.4 Pourquoi la compacité est utile
 
