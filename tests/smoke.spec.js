@@ -270,3 +270,29 @@ test('statistics course navigation is available from the homepage in both langua
   await page.locator('#lang').click();
   await expect(page.locator('#nav a[data-fr-href="statistiques/"]')).toHaveAttribute('href', 'en/statistics/');
 });
+
+
+test('statistics Level 1 curriculum lists all 31 topics and links published lessons', async ({ page }) => {
+  await page.goto('statistiques/niveau-1/');
+  await expect(page.locator('h1')).toContainText('Apprendre à lire');
+  await expect(page.locator('#topics .topic')).toHaveCount(31);
+  await expect(page.locator('#topics')).toContainText('S1.01');
+  await expect(page.locator('#topics')).toContainText('S3.09');
+  await expect(page.locator('#topics a[href="../../lessons/S1-01/"]')).toBeVisible();
+  await page.locator('#module').selectOption('S2');
+  await expect(page.locator('#topics .topic')).toHaveCount(10);
+  await page.locator('#status').selectOption('available');
+  await expect(page.locator('#topics .topic')).toHaveCount(0);
+  await page.locator('#module').selectOption('S1');
+  await expect(page.locator('#topics .topic')).toHaveCount(7);
+});
+
+test('statistics Level 1 curriculum is available in English', async ({ page }) => {
+  await page.goto('en/statistics/level-1/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('h1')).toContainText('Learn to read');
+  await expect(page.locator('#topics .topic')).toHaveCount(31);
+  await expect(page.locator('#topics')).toContainText('To develop');
+  await page.locator('#lang').click();
+  await expect(page).toHaveURL(/statistiques\/niveau-1\/$/);
+});
