@@ -70,3 +70,6 @@ La passerelle et son approfondissement sont des extensions préparatoires du Blo
 
 - [Suites et séries numériques — convergence et critères](etudes-universitaires/SUITES-SERIES-CONVERGENCE.md)
 - [20 exercices corrigés — suites et séries](etudes-universitaires/EXERCICES-SUITES-SERIES.md)
+
+- [Topologie élémentaire de R — cours](etudes-universitaires/TOPOLOGIE-ELEMENTAIRE-R.md)
+- [20 exercices corrigés — topologie de R](etudes-universitaires/EXERCICES-TOPOLOGIE-R.md)
