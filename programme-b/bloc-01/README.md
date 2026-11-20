@@ -67,3 +67,6 @@ Une série de dossiers approfondit les huit cours par des démonstrations, des e
 - [Exercices et corrigés sur la complétude](etudes-universitaires/EXERCICES-COMPLETUDE-REELS.md)
 
 La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les dérivées et intégrales restent hors périmètre.
+
+- [Suites et séries numériques — convergence et critères](etudes-universitaires/SUITES-SERIES-CONVERGENCE.md)
+- [20 exercices corrigés — suites et séries](etudes-universitaires/EXERCICES-SUITES-SERIES.md)
