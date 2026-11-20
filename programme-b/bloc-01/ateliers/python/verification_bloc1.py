@@ -14,8 +14,11 @@ def close(actual, expected, *, rel_tol=1e-10, abs_tol=1e-12):
         f"Attendu {expected}, obtenu {actual}"
     )
 
-# A — Intervalles et précision
-assert 80 <= 120
+# A — Intervalle admissible et précision
+candidate_values = (79.9, 80, 100, 120, 120.1)
+admissible = [x for x in candidate_values
+              if 0 <= x <= 200 and x > 40 and abs(x - 100) <= 20]
+assert admissible == [80, 100, 120]
 absolute_error_bound = 0.4
 relative_error_bound = 0.4 / 99.6
 close(absolute_error_bound, 0.4)
@@ -44,16 +47,19 @@ assert 1.025 ** 10 < 1.30 <= 1.025 ** 11
 
 # E — Équation avec racine et système
 root_candidates = (3, -1)
-valid_roots = [x for x in root_candidates if x >= 0 and isclose((2*x + 3) ** 0.5, x)]
+valid_roots = [x for x in root_candidates
+               if x >= 0 and isclose((2*x + 3) ** 0.5, x)]
 assert valid_roots == [3]
 a, b = 7.4, 4.2
 close(2*a + b, 19)
 close(a - 2*b, -1)
 
 # F — Composition de fonctions
-composed_tariff = lambda x: 6 + 0.8 * (1.25 * x)
+def composed_tariff(x):
+    return 6 + 0.8 * (1.25 * x)
+
 close(composed_tariff(20), 26)
-close((26 - 6), 20)
+close(26 - 6, 20)
 
 # G — Cas portefeuille
 frequency_1 = 48 / 800
