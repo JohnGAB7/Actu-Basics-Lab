@@ -25,6 +25,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Feuille de réponses vierge](FEUILLE-REPONSES-EXAMEN.md) | Copie structurée sans les solutions |
 | [Corrigé et barème de l'examen](CORRIGE-EXAMEN-FINAL.md) | Solutions détaillées et grille de notation |
 | [Diagnostic et remédiation](DIAGNOSTIC-ET-REMEDIATION.md) | Identifier les lacunes et organiser la reprise |
+| [Passerelle vers l'analyse mathématique](PASSERELLE-ANALYSE-FONDAMENTALE.md) | Logique, preuves, suites, limites et continuité |
+| [Exercices et corrigés de la passerelle](EXERCICES-PASSERELLE-ANALYSE.md) | 16 exercices progressifs et problèmes de synthèse |
 
 ## Modalités de travail recommandées
 
@@ -33,6 +35,12 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 - **Étape 3 — Évaluation :** imprimer ou copier la feuille de réponses, puis passer l'examen final en 2 heures, sans cours, avec calculatrice scientifique simple.
 - **Étape 4 — Correction active :** comparer les démarches, pas seulement les résultats ; consigner les erreurs récurrentes.
 - **Étape 5 — Remédiation :** utiliser le diagnostic pour reprendre les compétences déficitaires et passer un mini-test de transfert.
+
+## Passerelle préparatoire — analyse mathématique
+
+La passerelle est une extension préparatoire du Bloc 1, et non l'ouverture du Bloc 2. Elle formalise les outils nécessaires à l'analyse réelle : logique, quantificateurs, méthodes de démonstration, suites réelles, convergence, limites de fonctions et continuité. Les dérivées et intégrales restent hors périmètre.
+
+Ordre conseillé : cours complet, exercices sans corrigé, rédaction des preuves, puis vérification détaillée. Les références bibliographiques et les hypothèses des théorèmes sont indiquées dans le cours.
 
 ## Vérification numérique
 
@@ -44,7 +52,7 @@ Le script Python utilise uniquement la bibliothèque standard. Le script R utili
 
 ## Niveau et limites
 
-Ces dossiers proposent un approfondissement de niveau universitaire introductif/intermédiaire. Ils ne constituent pas encore un traité complet d'analyse, d'algèbre ou de calcul numérique. Les démonstrations sont détaillées lorsque cela sert la compétence ciblée ; les résultats plus avancés sont signalés comme tels.
+Les dossiers F01–F08 proposent un approfondissement de niveau universitaire introductif/intermédiaire. La passerelle ajoute une initiation rigoureuse aux preuves et à l'analyse réelle élémentaire. Ces documents ne constituent pas un traité exhaustif d'analyse, d'algèbre ou de calcul numérique.
 
 ## Règle de qualité
 
