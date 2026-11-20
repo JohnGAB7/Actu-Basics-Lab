@@ -31,6 +31,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Exercices sur la complétude](EXERCICES-COMPLETUDE-REELS.md) | 16 exercices et corrigés détaillés |
 | [Suites et séries numériques](SUITES-SERIES-CONVERGENCE.md) | Sous-suites, Bolzano–Weierstrass, séries, critères et convergence absolue/conditionnelle |
 | [Exercices corrigés — suites et séries](EXERCICES-SUITES-SERIES.md) | 20 exercices progressifs avec solutions détaillées |
+| [Topologie élémentaire de R](TOPOLOGIE-ELEMENTAIRE-R.md) | Ouverts, fermés, adhérence, compacité, connexité et continuité |
+| [Exercices corrigés — topologie de R](EXERCICES-TOPOLOGIE-R.md) | 20 exercices avec preuves et contre-exemples |
 
 ## Modalités de travail recommandées
 
