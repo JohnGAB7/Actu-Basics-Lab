@@ -27,7 +27,9 @@ L'apprenant doit savoir classer les nombres, manipuler fractions et pourcentages
 ## Ressources d'entraînement et de programmation
 - [Ateliers pratiques — guide](ateliers/README.md)
 - [Python — script exécutable](ateliers/python/fondations.py)
+- [Python — contrôles numériques de l'examen](ateliers/python/verification_bloc1.py)
 - [R — script exécutable](ateliers/r/fondations.R)
+- [R — contrôles numériques de l'examen](ateliers/r/verification_bloc1.R)
 - [VBA — module importable](ateliers/vba/Bloc1Fondations.bas)
 - [Excel — formules et contrôles](ateliers/excel/FORMULES.md)
 - [Banque de 40 exercices](exercices/ENONCES.md)
@@ -51,7 +53,12 @@ Chaque cours dispose désormais d'un complément de rigueur : démonstrations, c
 - [Corrigés des problèmes avancés](CORRIGES-AVANCES.md)
 
 ## Études universitaires et cas intégrateur
-Une nouvelle série de dossiers approfondit les huit cours par des démonstrations, des exemples travaillés, des problèmes progressifs et des questions de défense orale. Elle comprend également une évaluation transversale sur l'analyse d'un portefeuille.
+Une série de dossiers approfondit les huit cours par des démonstrations, des exemples travaillés, des problèmes progressifs et des questions de défense orale. Elle comprend une évaluation transversale sur l'analyse d'un portefeuille, un examen final, des corrigés et un parcours de remédiation.
 
 - [Dossiers d'études universitaires F01–F08](etudes-universitaires/README.md)
 - [Évaluation transversale et corrigé](etudes-universitaires/EVALUATION-TRANSVERSALE.md)
+- [Examen final de 2 heures](etudes-universitaires/EXAMEN-FINAL-BLOC-1.md)
+- [Feuille de réponses vierge](etudes-universitaires/FEUILLE-REPONSES-EXAMEN.md)
+- [Corrigé de l'examen](etudes-universitaires/CORRIGE-EXAMEN-FINAL.md)
+- [Diagnostic et remédiation](etudes-universitaires/DIAGNOSTIC-ET-REMEDIATION.md)
+
