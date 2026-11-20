@@ -278,7 +278,7 @@ test('statistics Level 1 curriculum lists all 31 topics and links published less
   await expect(page.locator('#topics .topic')).toHaveCount(31);
   await expect(page.locator('#topics')).toContainText('S1.01');
   await expect(page.locator('#topics')).toContainText('S3.09');
-  await expect(page.locator('#topics a[href="../../lessons/S1-01/"]')).toBeVisible();
+  await expect(page.locator('#topics a[href="/lessons/S1-01/"]')).toBeVisible();
   await page.locator('#module').selectOption('S2');
   await expect(page.locator('#topics .topic')).toHaveCount(10);
   await page.locator('#status').selectOption('available');
