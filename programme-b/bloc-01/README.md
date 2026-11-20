@@ -49,3 +49,9 @@ Chaque cours dispose désormais d'un complément de rigueur : démonstrations, c
 - [F08 — Repères, graphiques et unités](F08-APPROFONDISSEMENT.md)
 - [16 problèmes avancés](PROBLEMES-AVANCES.md)
 - [Corrigés des problèmes avancés](CORRIGES-AVANCES.md)
+
+## Études universitaires et cas intégrateur
+Une nouvelle série de dossiers approfondit les huit cours par des démonstrations, des exemples travaillés, des problèmes progressifs et des questions de défense orale. Elle comprend également une évaluation transversale sur l'analyse d'un portefeuille.
+
+- [Dossiers d'études universitaires F01–F08](etudes-universitaires/README.md)
+- [Évaluation transversale et corrigé](etudes-universitaires/EVALUATION-TRANSVERSALE.md)
