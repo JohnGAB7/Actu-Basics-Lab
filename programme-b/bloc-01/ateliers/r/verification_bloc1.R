@@ -12,7 +12,13 @@ check_close <- function(actual, expected, tolerance = 1e-10) {
   invisible(TRUE)
 }
 
-# A — Intervalles et précision
+# A — Intervalle admissible et précision
+candidate_values <- c(79.9, 80, 100, 120, 120.1)
+admissible <- candidate_values[
+  candidate_values >= 0 & candidate_values <= 200 &
+    candidate_values > 40 & abs(candidate_values - 100) <= 20
+]
+stopifnot(identical(admissible, c(80, 100, 120)))
 absolute_error_bound <- 0.4
 relative_error_bound <- 0.4 / 99.6
 check_close(absolute_error_bound, 0.4)
