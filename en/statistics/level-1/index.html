@@ -37,7 +37,7 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
 <script>
 const english=true;
 const root=location.pathname.includes('/Actu-Basics-Lab/')?'/Actu-Basics-Lab/':'/';
-document.getElementById('lang').onclick=()=>location.href=english?'../../statistiques/niveau-1/':'../../en/statistics/level-1/';
+document.getElementById('lang').onclick=()=>location.href=english?'../../../statistiques/niveau-1/':'../../en/statistics/level-1/';
 document.getElementById('theme').onclick=()=>{const d=document.documentElement;d.dataset.theme=d.dataset.theme==='dark'?'light':'dark'};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let entries=[];
