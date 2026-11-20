@@ -143,7 +143,7 @@ else:
 
 required = [
     "index.html", "en/index.html", "bibliotheque/index.html", "en/library/index.html",
-    "parcours/index.html", "en/paths/index.html", "statistiques/index.html", "en/statistics/index.html", "a-propos/index.html",
+    "parcours/index.html", "en/paths/index.html", "statistiques/index.html", "en/statistics/index.html", "statistiques/niveau-1/index.html", "en/statistics/level-1/index.html", "a-propos/index.html",
     "en/about/index.html", "lessons/A0-01/index.html", "en/lessons/A0-01/index.html",
     "lessons/A1-01/index.html", "en/lessons/A1-01/index.html",
     "lessons/A2-01/index.html", "en/lessons/A2-01/index.html",
