@@ -23,3 +23,15 @@ Pour chaque notion : reformuler l'idée, écrire la définition avec ses conditi
 
 ## Validation
 L'apprenant doit savoir classer les nombres, manipuler fractions et pourcentages, composer des variations, respecter les domaines des racines et logarithmes, développer et factoriser, résoudre équations et systèmes, analyser une fonction, produire un graphique fidèle et contrôler ses calculs par logiciel. Une réponse sans justification ne suffit pas à valider la maîtrise.
+
+## Ressources d'entraînement et de programmation
+- [Ateliers pratiques — guide](ateliers/README.md)
+- [Python — script exécutable](ateliers/python/fondations.py)
+- [R — script exécutable](ateliers/r/fondations.R)
+- [VBA — module importable](ateliers/vba/Bloc1Fondations.bas)
+- [Excel — formules et contrôles](ateliers/excel/FORMULES.md)
+- [Banque de 40 exercices](exercices/ENONCES.md)
+- [Corrigés détaillés](exercices/CORRIGES.md)
+- [Progression et critères de maîtrise](PROGRESSION-ET-CRITERES.md)
+- [Formulaire de synthèse](FORMULAIRE.md)
+- [Plan d'évaluation](PLAN-EVALUATION.md)
