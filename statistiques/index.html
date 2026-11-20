@@ -77,14 +77,14 @@ const name=names[english?'en':'fr'][number-1]||title;
 const count=filtered.filter(e=>e.status==='available').length;
 return '<details class="module" open><summary><div><div class="meta">'+esc(module)+' · '+(english?'LEVEL ':'NIVEAU ')+levelOf(number)+' · '+filtered.length+' '+(english?'topics':'notions')+'</div><h3>'+esc(name)+'</h3></div><span class="status">'+count+'/'+filtered.length+' '+(english?'published':'publiées')+'</span></summary><div class="module-body"><div class="topic-list">'+filtered.map(e=>{
 const status=e.status==='available'?'available':e.status==='script'?'script':'planned';
-const label=en?(status==='available'?'Published':status==='script'?'Source script':'To develop'):(status==='available'?'Publié':status==='script'?'Script source':'À développer');
+const label=english?(status==='available'?'Published':status==='script'?'Source script':'To develop'):(status==='available'?'Publié':status==='script'?'Script source':'À développer');
 const titleText=english?(e.titleEn||e.title):e.title;
 let href='#';if(e.pagePath)href=root+e.pagePath;else if(e.scriptPath)href='https://github.com/JohnGAB7/Actu-Basics/blob/master/'+e.scriptPath;
 return '<div class="topic"><a href="'+esc(href)+'"><span class="code">'+esc(e.id)+'</span> '+esc(titleText)+'</a><span class="status '+status+'">'+label+'</span></div>';
 }).join('')+'</div></div></details>';
 }).join('');
-document.getElementById('results').innerHTML=html||'<p class="muted">'+(en?'No matching topic.':'Aucune notion correspondante.')+'</p>';
-document.getElementById('results').setAttribute('aria-label',shown+' '+(en?'topics displayed':'notions affichées'));
+document.getElementById('results').innerHTML=html||'<p class="muted">'+(english?'No matching topic.':'Aucune notion correspondante.')+'</p>';
+document.getElementById('results').setAttribute('aria-label',shown+' '+(english?'topics displayed':'notions affichées'));
 }
 ['search','levelFilter','statusFilter'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
 </script></body></html>
