@@ -18,3 +18,6 @@ Le parcours vise une maîtrise universitaire solide et transférable. Les exempl
 - Les blocs suivants seront documentés dans des dossiers indépendants.
 
 Chaque cours présente objectifs, prérequis, définitions, propriétés, exemples résolus, applications, ateliers logiciels, exercices corrigés et critères de maîtrise.
+
+## Ressources transversales
+- [Bloc 1 — cours, ateliers et évaluations](bloc-01/README.md)
