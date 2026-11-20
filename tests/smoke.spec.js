@@ -62,10 +62,24 @@ test('M0.01 percentage calculator updates from a fraction', async ({ page }) => 
   await expect(page.locator('#pct')).toContainText('15');
 });
 
-test('S1.01 exercise gives immediate corrective feedback', async ({ page }) => {
+test('S1.01 is a complete bilingual data-foundations lesson', async ({ page }) => {
   await page.goto('lessons/S1-01/');
-  await page.locator('.answer[data-correct="yes"]').click();
-  await expect(page.locator('.feedback')).toContainText('Exact');
+  await expect(page.locator('h1')).toContainText('Qu\'est-ce qu\'une donnée');
+  await expect(page.locator('#vocabulaire')).toContainText('Population cible');
+  await expect(page.locator('#paris')).toContainText('13 320 752');
+  await expect(page.locator('#structure')).toContainText('xᵢⱼ');
+  await expect(page.locator('#qualite')).toContainText('Non-réponse');
+  await expect(page.locator('.exercise')).toHaveCount(4);
+  await page.locator('.exercise summary').first().click();
+  await expect(page.locator('.exercise details[open]')).toHaveCount(1);
+  await expect(page.locator('pre code').first()).toContainText('data.frame');
+  await expect(page.locator('pre code').nth(1)).toContainText('pandas');
+  await page.goto('en/lessons/S1-01/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('h1')).toContainText('What counts as data');
+  await expect(page.locator('#vocabulaire')).toContainText('Target population');
+  await expect(page.locator('#paris')).toContainText('13,320,752');
+  await expect(page.locator('#lab')).toContainText('Mini-lab');
 });
 
 test('S1.05 transcript reveals source-script corrections', async ({ page }) => {
