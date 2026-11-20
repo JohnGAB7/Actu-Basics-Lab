@@ -85,9 +85,9 @@ Le niveau final est **264,195**, soit environ 264,20 si l'on arrondit à deux d�
 
 Pour trois périodes :
 \[
-\bar r=G^{1/3}-1=1,05678^{1/3}-1\approx0,01855.
+\bar r=G^{1/3}-1=1,05678^{1/3}-1\approx0,018579.
 \]
-Soit environ **1,855 % par période**. Le taux moyen géométrique reproduit le même facteur cumulé.
+Soit environ **1,858 % par période**. Le taux moyen géométrique reproduit le même facteur cumulé.
 
 ### 4. Rebasage (3 pts)
 
@@ -236,11 +236,11 @@ Barème : charges (2), variation (2).
 
 En changeant d'abord le nombre de sinistres au coût initial :
 \[
-(65-48)\times500=8,500\text{ €}.
+(65-48)\times500=8\,500\text{ €}.
 \]
 Puis en changeant le coût moyen sur 65 sinistres :
 \[
-65\times(520-500)=1,300\text{ €}.
+65\times(520-500)=1\,300\text{ €}.
 \]
 Total : 8 500+1 300=9 800 €, égal à 33 800−24 000.
 
