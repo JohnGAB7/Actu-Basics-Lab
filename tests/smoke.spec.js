@@ -226,3 +226,47 @@ test('VBA automation is represented in the knowledge graph', async ({ page }) =>
   await page.locator('#nodes .node-btn').filter({ hasText: 'Automatiser une analyse dans Excel VBA' }).click();
   await expect(page.locator('#detail')).toContainText('tool_practice');
 });
+
+
+test('statistics curriculum exposes all 177 topics across 19 modules in French', async ({ page }) => {
+  await page.goto('statistiques/');
+  await expect(page.locator('h1')).toContainText('De la première donnée');
+  await expect(page.locator('#topicCount')).toHaveText('177');
+  await expect(page.locator('#results .module')).toHaveCount(19);
+  await expect(page.locator('#results')).toContainText('S19.08');
+  await expect(page.locator('#results')).toContainText('S1.01');
+  await expect(page.locator('#results .topic a[href="../lessons/S1-01/"]')).toBeVisible();
+  await page.locator('#search').fill('maximum de vraisemblance');
+  await expect(page.locator('#results .topic')).toHaveCount(1);
+  await expect(page.locator('#results')).toContainText('S7.05');
+  await page.locator('#search').fill('');
+  await page.locator('#levelFilter').selectOption('5');
+  await expect(page.locator('#results .module')).toHaveCount(7);
+  await page.locator('#levelFilter').selectOption('');
+  await page.locator('#statusFilter').selectOption('available');
+  await expect(page.locator('#results .topic')).toHaveCount(7);
+});
+
+test('statistics curriculum is bilingual and keeps publication statuses honest', async ({ page }) => {
+  await page.goto('en/statistics/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('h1')).toContainText('From the first data point');
+  await expect(page.locator('#topicCount')).toHaveText('177');
+  await expect(page.locator('#results')).toContainText('S18.06');
+  await expect(page.locator('#results')).toContainText('To develop');
+  await page.locator('#statusFilter').selectOption('available');
+  await expect(page.locator('#results .topic')).toHaveCount(7);
+  await page.locator('#lang').click();
+  await expect(page).toHaveURL(/statistiques\/$/);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
+});
+
+test('statistics course navigation is available from the homepage in both languages', async ({ page }) => {
+  await page.goto('');
+  await expect(page.locator('#nav a[data-fr-href="statistiques/"]')).toBeVisible();
+  await page.locator('#nav a[data-fr-href="statistiques/"]').click();
+  await expect(page).toHaveURL(/statistiques\/$/);
+  await page.goto('');
+  await page.locator('#lang').click();
+  await expect(page.locator('#nav a[data-fr-href="statistiques/"]')).toHaveAttribute('href', 'en/statistics/');
+});
