@@ -27,6 +27,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Diagnostic et remédiation](DIAGNOSTIC-ET-REMEDIATION.md) | Identifier les lacunes et organiser la reprise |
 | [Passerelle vers l'analyse mathématique](PASSERELLE-ANALYSE-FONDAMENTALE.md) | Logique, preuves, suites, limites et continuité |
 | [Exercices et corrigés de la passerelle](EXERCICES-PASSERELLE-ANALYSE.md) | 16 exercices progressifs et problèmes de synthèse |
+| [Complétude de R, supremum et Cauchy](COMPLETUDE-REELS-SUPREMUM-CAUCHY.md) | Structure ordonnée, propriété de la borne supérieure, densité et complétude |
+| [Exercices sur la complétude](EXERCICES-COMPLETUDE-REELS.md) | 16 exercices et corrigés détaillés |
 
 ## Modalités de travail recommandées
 
@@ -38,9 +40,11 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 
 ## Passerelle préparatoire — analyse mathématique
 
-La passerelle est une extension préparatoire du Bloc 1, et non l'ouverture du Bloc 2. Elle formalise les outils nécessaires à l'analyse réelle : logique, quantificateurs, méthodes de démonstration, suites réelles, convergence, limites de fonctions et continuité. Les dérivées et intégrales restent hors périmètre.
+La passerelle est une extension préparatoire du Bloc 1, et non l'ouverture du Bloc 2. Elle formalise les outils nécessaires à l'analyse réelle : logique, quantificateurs, méthodes de démonstration, suites réelles, convergence, limites de fonctions et continuité.
 
-Ordre conseillé : cours complet, exercices sans corrigé, rédaction des preuves, puis vérification détaillée. Les références bibliographiques et les hypothèses des théorèmes sont indiquées dans le cours.
+Un second dossier approfondit maintenant la complétude de R : supremum, infimum, propriété archimédienne, densité de Q, intervalles emboîtés et suites de Cauchy. Il explicite pourquoi les propriétés de convergence dépendent de l'ensemble numérique dans lequel on travaille.
+
+Ordre conseillé : lire les cours, refaire les démonstrations à la main, résoudre les exercices sans consulter les corrigés, puis vérifier les hypothèses et les preuves. Les dérivées et intégrales restent hors périmètre.
 
 ## Vérification numérique
 
