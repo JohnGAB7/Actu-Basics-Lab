@@ -22,6 +22,8 @@ F01 → F02 → F03 → F04 → F05 → F06 → F07 → F08. F08 mobilise l'ense
 Pour chaque notion : reformuler l'idée, écrire la définition avec ses conditions, résoudre sans aide, produire un contre-exemple, vérifier par une autre méthode, puis interpréter le résultat et ses unités.
 
 ## Validation
+La validation pédagogique du Bloc 1 comprend l'examen transversal des fondations et l'évaluation complémentaire de calcul différentiel, suivis d'un diagnostic et d'une remédiation ciblée. Les seuils proposés sont des conventions internes et ne remplacent pas une décision académique. Le dépôt contient les supports et évaluations ; il ne permet pas de conclure que l'apprenant a réussi tant que les épreuves n'ont pas été passées et corrigées.
+
 L'apprenant doit savoir classer les nombres, manipuler fractions et pourcentages, composer des variations, respecter les domaines des racines et logarithmes, développer et factoriser, résoudre équations et systèmes, analyser une fonction, produire un graphique fidèle et contrôler ses calculs par logiciel. Une réponse sans justification ne suffit pas à valider la maîtrise.
 
 ## Ressources d'entraînement et de programmation
@@ -66,7 +68,7 @@ Une série de dossiers approfondit les huit cours par des démonstrations, des e
 - [Complétude de R, supremum et Cauchy](etudes-universitaires/COMPLETUDE-REELS-SUPREMUM-CAUCHY.md)
 - [Exercices et corrigés sur la complétude](etudes-universitaires/EXERCICES-COMPLETUDE-REELS.md)
 
-La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les limites et la continuité font l'objet d'un approfondissement dédié : définitions epsilon-delta, limites latérales et à l'infini, caractérisation séquentielle, classification des discontinuités, théorèmes des valeurs intermédiaires et des extrema, continuité uniforme. Le calcul différentiel a commencé par un cours consacré à la définition de la dérivée et aux techniques de dérivation. La prochaine étape portera sur les applications du calcul différentiel : théorème de Rolle et des accroissements finis, monotonie, extrema, convexité, approximations de Taylor, optimisation et méthode de Newton. L'intégration reste hors périmètre de cette étape.
+La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les limites et la continuité font l'objet d'un approfondissement dédié : définitions epsilon-delta, limites latérales et à l'infini, caractérisation séquentielle, classification des discontinuités, théorèmes des valeurs intermédiaires et des extrema, continuité uniforme. Le calcul différentiel est maintenant développé en deux unités complémentaires : définition et techniques de dérivation, puis applications (Rolle, TAF, inégalités, extrema, convexité, étude de fonctions, Taylor avec reste, optimisation, taux liés et Newton). Une banque de 20 exercices corrigés et un examen complémentaire de 2 h 30 avec corrigé et barème complètent ce parcours. L'intégration reste hors périmètre du Bloc 1.
 
 - [Suites et séries numériques — convergence et critères](etudes-universitaires/SUITES-SERIES-CONVERGENCE.md)
 - [20 exercices corrigés — suites et séries](etudes-universitaires/EXERCICES-SUITES-SERIES.md)
@@ -77,3 +79,7 @@ La passerelle et son approfondissement sont des extensions préparatoires du Blo
 - [20 exercices corrigés — limites et continuité](etudes-universitaires/EXERCICES-LIMITES-CONTINUITE.md)
 - [Dérivée et techniques de dérivation — cours](etudes-universitaires/DERIVEE-TECHNIQUES-DERIVATION.md)
 - [20 exercices corrigés — dérivation](etudes-universitaires/EXERCICES-DERIVEE-DERIVATION.md)
+- [Applications du calcul différentiel — cours](etudes-universitaires/APPLICATIONS-CALCUL-DIFFERENTIEL.md)
+- [20 exercices corrigés — applications différentielles](etudes-universitaires/EXERCICES-APPLICATIONS-CALCUL-DIFFERENTIEL.md)
+- [Examen complémentaire de calcul différentiel — 2 h 30](etudes-universitaires/EXAMEN-CALCUL-DIFFERENTIEL.md)
+- [Corrigé et barème de l'examen différentiel](etudes-universitaires/CORRIGE-EXAMEN-CALCUL-DIFFERENTIEL.md)
