@@ -15,6 +15,8 @@ Le parcours vise une maîtrise universitaire solide et transférable. Les exempl
 
 ## Organisation
 - [Bloc 1 — Fondations mathématiques](bloc-01/README.md)
+
+Le Bloc 1 dispose de ses fondations F01–F08, de ses approfondissements universitaires en analyse réelle et calcul différentiel jusqu'aux applications de la dérivation, ainsi que de deux évaluations distinctes avec corrigés. Sa validation par l'apprenant reste conditionnée à la passation et à la correction des épreuves.
 - Les blocs suivants seront documentés dans des dossiers indépendants.
 
 Chaque cours présente objectifs, prérequis, définitions, propriétés, exemples résolus, applications, ateliers logiciels, exercices corrigés et critères de maîtrise.
