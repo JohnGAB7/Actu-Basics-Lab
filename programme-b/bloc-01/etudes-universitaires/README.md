@@ -37,6 +37,10 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Exercices corrigés — limites et continuité](EXERCICES-LIMITES-CONTINUITE.md) | 20 exercices progressifs avec preuves et corrigés détaillés |
 | [Dérivée et techniques de dérivation](DERIVEE-TECHNIQUES-DERIVATION.md) | Définition, dérivabilité, règles, chaîne, fonctions usuelles, inverse et dérivation implicite |
 | [Exercices corrigés — dérivation](EXERCICES-DERIVEE-DERIVATION.md) | 20 exercices de calcul, démonstration et interprétation |
+| [Applications du calcul différentiel](APPLICATIONS-CALCUL-DIFFERENTIEL.md) | Rolle, TAF, monotonie, extrema, convexité, Taylor, optimisation, taux liés et Newton |
+| [Exercices corrigés — applications différentielles](EXERCICES-APPLICATIONS-CALCUL-DIFFERENTIEL.md) | 20 exercices corrigés, des preuves aux applications quantitatives |
+| [Examen complémentaire de calcul différentiel](EXAMEN-CALCUL-DIFFERENTIEL.md) | Évaluation indépendante de 2 h 30 sur 100 points |
+| [Corrigé et barème — calcul différentiel](CORRIGE-EXAMEN-CALCUL-DIFFERENTIEL.md) | Corrigé détaillé, barème et interprétation pédagogique |
 
 ## Modalités de travail recommandées
 
@@ -52,7 +56,7 @@ La passerelle est une extension préparatoire du Bloc 1, et non l'ouverture du B
 
 Un second dossier approfondit maintenant la complétude de R : supremum, infimum, propriété archimédienne, densité de Q, intervalles emboîtés et suites de Cauchy. Il explicite pourquoi les propriétés de convergence dépendent de l'ensemble numérique dans lequel on travaille.
 
-Ordre conseillé : lire les cours, refaire les démonstrations à la main, résoudre les exercices sans consulter les corrigés, puis vérifier les hypothèses et les preuves. La nouvelle étude sur les limites et la continuité approfondit les notions évoquées dans la passerelle : epsilon-delta, limites latérales, caractérisation séquentielle, discontinuités, TVI, extrema et continuité uniforme. Les dérivées et intégrales restent hors périmètre.
+Ordre conseillé : lire les cours, refaire les démonstrations à la main, résoudre les exercices sans consulter les corrigés, puis vérifier les hypothèses et les preuves. La nouvelle étude sur les limites et la continuité approfondit les notions évoquées dans la passerelle : epsilon-delta, limites latérales, caractérisation séquentielle, discontinuités, TVI, extrema et continuité uniforme. Le calcul différentiel est maintenant couvert par un cours de techniques de dérivation et une unité d'applications. L'intégration reste hors périmètre du Bloc 1.
 
 ## Vérification numérique
 
@@ -64,7 +68,7 @@ Le script Python utilise uniquement la bibliothèque standard. Le script R utili
 
 ## Niveau et limites
 
-Les dossiers F01–F08 proposent un approfondissement de niveau universitaire introductif/intermédiaire. La passerelle ajoute une initiation rigoureuse aux preuves et à l'analyse réelle élémentaire. Ces documents ne constituent pas un traité exhaustif d'analyse, d'algèbre ou de calcul numérique.
+Les dossiers F01–F08 proposent un approfondissement de niveau universitaire introductif/intermédiaire. La passerelle ajoute une initiation rigoureuse aux preuves et à l'analyse réelle élémentaire, jusqu'aux applications fondamentales du calcul différentiel. Ces documents ne constituent pas un traité exhaustif d'analyse, d'algèbre ou de calcul numérique.
 
 ## Règle de qualité
 
