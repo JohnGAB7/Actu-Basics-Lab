@@ -65,10 +65,11 @@ Point critique \(q=20\), admissible. (4 pts)
 
 \(\Pi''(q)=-2,4<0\), donc le point critique est un maximum strict local. Sur le compact [0,40], le maximum global est atteint ; comparer :
 \[
-\Pi(0)=-100,\quad \Pi(20)=480-480-100=-100,\quad
-\Pi(40)=1920-1920-100=-100.
+\Pi(0)=-100,\quad
+\Pi(20)=48(20)-1,2(20)^2-100=960-480-100=380,\quad
+\Pi(40)=48(40)-1,2(40)^2-100=1920-1920-100=-100.
 \]
-Les trois valeurs sont égales ! Cela indique une erreur de calcul apparente si l'on interprète la forme : reprenons le calcul de l'objectif. Pour \(q=20\), \(48(20)-1,2(400)-100=960-480-100=380\). Pour \(q=40\), \(1920-1920-100=-100\). Ainsi le maximum global vaut **380 €**, atteint à \(q=20\). (6 pts)
+Le maximum global vaut **380 €**, atteint à \(q=20\). (6 pts)
 
 Limites possibles : demande et prix supposés fixes ; coûts simplifiés ; incertitude et capacité ; absence de contraintes discrètes ; paramètres estimés. (6 pts)
 
