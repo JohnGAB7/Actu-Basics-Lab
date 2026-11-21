@@ -129,3 +129,54 @@ Proposition de règle :
 - capacité à expliquer les unités, les domaines et les limites des modèles.
 
 Cette règle est une proposition de progression pédagogique interne. Elle pourra être adaptée si le programme complet fixe ultérieurement des exigences plus strictes.
+
+## 8. Diagnostic complémentaire — calcul différentiel
+
+L'examen complémentaire de calcul différentiel est une épreuve distincte de l'examen transversal initial. Il vérifie les théorèmes et applications ajoutés à la passerelle universitaire.
+
+| Partie | Compétences évaluées | Signaux d'alerte | Ressources |
+|---|---|---|---|
+| A | Rolle, TAF, inégalités et contre-exemples | Hypothèses non vérifiées ; confusion pente moyenne/pente instantanée | APPLICATIONS-CALCUL-DIFFERENTIEL.md, exercices 1–5 |
+| B | Points critiques, extrema et convexité | f'=0 assimilé à un extremum ; f''=0 assimilé à une inflexion | Cours sections 5–7, exercices 6–10 |
+| C | Taylor et contrôle du reste | Polynôme sans ordre ; approximation présentée comme exacte ; reste non borné | Cours section 8, exercices 11–12 |
+| D | Optimisation | Domaine ou frontières oubliés ; optimum local annoncé global sans preuve | Cours section 9, exercices 13–14 |
+| E | Taux liés | Dérivation temporelle incorrecte ; unités incohérentes | Cours section 10, exercice 15 |
+| F | Newton | Division par une pente nulle ; convergence supposée automatique | Cours section 11, exercices 16–17 |
+| G | Sensibilité quantitative | Dérivée interprétée comme causalité ou validation empirique | Cours section 12, exercices 18–20 |
+
+### E6 — Erreur de théorème ou d'hypothèse
+
+**Remédiation :** écrire chaque hypothèse avant la conclusion, identifier la partie du domaine concernée et construire un contre-exemple lorsque l'hypothèse est retirée.
+
+**Validation :** énoncer correctement Rolle et le TAF, résoudre un exercice d'application et expliquer pourquoi un exemple où la dérivabilité manque ne permet pas d'appliquer le théorème.
+
+### E7 — Erreur d'optimisation
+
+**Remédiation :** reformuler les contraintes, écrire le domaine fermé ou ouvert, rechercher les points critiques et non-dérivables, puis comparer les frontières lorsque celles-ci appartiennent au domaine.
+
+**Validation :** résoudre un problème nouveau et démontrer pourquoi le candidat retenu est globalement optimal.
+
+### E8 — Erreur d'approximation
+
+**Remédiation :** préciser le point de développement, l'ordre du polynôme, l'intervalle étudié et une borne du reste issue d'une dérivée d'ordre supérieur.
+
+**Validation :** produire une approximation et une borne d'erreur indépendante de la seule valeur approchée.
+
+### E9 — Erreur de calcul numérique
+
+**Remédiation :** distinguer le résidu |f(x_n)|, le déplacement |x_(n+1)-x_n| et l'erreur réelle sur la racine ; vérifier que la pente n'est pas trop faible et fixer un nombre maximal d'itérations.
+
+**Validation :** effectuer deux itérations de Newton à la main et expliquer les limites d'un critère d'arrêt.
+
+### 8.1 Règle de progression après les deux examens
+
+Les deux examens ont des objets différents : le premier évalue les fondations F01–F08 et le raisonnement quantitatif ; le second évalue le calcul différentiel et ses applications. Une réussite à l'un ne compense pas automatiquement une lacune critique dans l'autre.
+
+Proposition pédagogique de validation complète du Bloc 1 :
+- réussir l'examen transversal des fondations ;
+- réussir l'évaluation complémentaire de calcul différentiel ;
+- corriger toute erreur conceptuelle critique portant sur le domaine, les hypothèses d'un théorème, les unités, le reste d'approximation ou les contraintes d'optimisation ;
+- réussir un mini-test de transfert conçu avec des données nouvelles ;
+- être capable de défendre oralement les hypothèses et les limites d'un modèle.
+
+Les seuils chiffrés des examens sont des repères pédagogiques internes, non des normes académiques universelles. Aucune réussite personnelle n'est présumée par la seule publication des documents.
