@@ -73,8 +73,12 @@ Les seuils de validation seront fixés dans le dossier d'évaluation. Ils sont d
 ### AL01 — Vecteurs et géométrie
 - [Cours AL01](AL01-VECTEURS-GEOMETRIE.md)
 - [Exercices corrigés AL01](EXERCICES-AL01-VECTEURS.md)
+- [Cours AL02 — Matrices et systèmes linéaires](AL02-MATRICES-SYSTEMES.md)
+- [Exercices corrigés AL02](EXERCICES-AL02-MATRICES.md)
 - [Atelier Python](ateliers/python/al01_vecteurs.py)
 - [Atelier R](ateliers/r/al01_vecteurs.R)
+- [Python — matrices et élimination de Gauss](ateliers/python/al02_matrices.py)
+- [R — matrices et élimination de Gauss](ateliers/r/al02_matrices.R)
 
 Les autres unités seront ajoutées dans cet index au fur et à mesure de leur rédaction, contrôle et publication.
 
