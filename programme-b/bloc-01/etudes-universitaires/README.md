@@ -35,6 +35,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Exercices corrigés — topologie de R](EXERCICES-TOPOLOGIE-R.md) | 20 exercices avec preuves et contre-exemples |
 | [Limites de fonctions et continuité](LIMITES-FONCTIONS-CONTINUITE.md) | Epsilon-delta, limites latérales, caractérisation séquentielle, continuité, TVI, extrema et continuité uniforme |
 | [Exercices corrigés — limites et continuité](EXERCICES-LIMITES-CONTINUITE.md) | 20 exercices progressifs avec preuves et corrigés détaillés |
+| [Dérivée et techniques de dérivation](DERIVEE-TECHNIQUES-DERIVATION.md) | Définition, dérivabilité, règles, chaîne, fonctions usuelles, inverse et dérivation implicite |
+| [Exercices corrigés — dérivation](EXERCICES-DERIVEE-DERIVATION.md) | 20 exercices de calcul, démonstration et interprétation |
 
 ## Modalités de travail recommandées
 
