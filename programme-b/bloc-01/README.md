@@ -66,10 +66,12 @@ Une série de dossiers approfondit les huit cours par des démonstrations, des e
 - [Complétude de R, supremum et Cauchy](etudes-universitaires/COMPLETUDE-REELS-SUPREMUM-CAUCHY.md)
 - [Exercices et corrigés sur la complétude](etudes-universitaires/EXERCICES-COMPLETUDE-REELS.md)
 
-La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les dérivées et intégrales restent hors périmètre.
+La passerelle et son approfondissement sont des extensions préparatoires du Bloc 1, non l'ouverture du Bloc 2. Ils couvrent la logique, les démonstrations, les suites, les limites, la continuité, la complétude de R, les bornes supérieures et inférieures et les suites de Cauchy. Les limites et la continuité font l'objet d'un approfondissement dédié : définitions epsilon-delta, limites latérales et à l'infini, caractérisation séquentielle, classification des discontinuités, théorèmes des valeurs intermédiaires et des extrema, continuité uniforme. Les dérivées et intégrales restent hors périmètre.
 
 - [Suites et séries numériques — convergence et critères](etudes-universitaires/SUITES-SERIES-CONVERGENCE.md)
 - [20 exercices corrigés — suites et séries](etudes-universitaires/EXERCICES-SUITES-SERIES.md)
 
 - [Topologie élémentaire de R — cours](etudes-universitaires/TOPOLOGIE-ELEMENTAIRE-R.md)
 - [20 exercices corrigés — topologie de R](etudes-universitaires/EXERCICES-TOPOLOGIE-R.md)
+- [Limites de fonctions et continuité — cours](etudes-universitaires/LIMITES-FONCTIONS-CONTINUITE.md)
+- [20 exercices corrigés — limites et continuité](etudes-universitaires/EXERCICES-LIMITES-CONTINUITE.md)
