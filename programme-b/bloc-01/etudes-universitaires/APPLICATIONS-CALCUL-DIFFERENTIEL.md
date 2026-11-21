@@ -211,6 +211,13 @@ On obtient \(x_1=1,5\), \(x_2=1,4166667\), \(x_3\approx1,4142157\), qui approche
 
 Critères d'arrêt possibles : \(|f(x_n)|\leq\varepsilon_f\), \(|x_{n+1}-x_n|\leq\varepsilon_x(1+|x_n|)\), ou une borne d'erreur démontrée. Un nombre maximal d'itérations est nécessaire en pratique. Un petit résidu ne garantit pas à lui seul une petite erreur sur la racine si la pente est très faible.
 
+
+### 11.1 Convergence locale près d'une racine simple
+
+Un résultat classique précise les circonstances favorables. Supposons que \(f\) soit de classe \(C^2\) dans un voisinage d'une racine \(\alpha\), que \(f(\alpha)=0\) et \(f'(\alpha)\ne0\). Alors il existe un voisinage de \(\alpha\) tel que, si \(x_0\) est choisi suffisamment près de \(\alpha\), les itérations de Newton restent dans ce voisinage et convergent vers \(\alpha\). Sous ces hypothèses, la convergence est localement quadratique : l'erreur à l'étape suivante est majorée par une constante fois le carré de l'erreur courante, lorsque les itérations sont assez proches.
+
+**Justification de l'ordre.** Écrivons \(e_n=x_n-\alpha\). Le développement de Taylor autour de la racine montre que le terme linéaire est éliminé par la correction de Newton ; le premier terme restant est d'ordre \(e_n^2\). La condition \(f'(\alpha)\ne0\) évite une division par une pente nulle. La régularité \(C^2\) contrôle le reste. Cette conclusion est locale : elle ne garantit pas la convergence depuis un point initial arbitraire, ni en présence d'une racine multiple.
+
 ## 12. Applications quantitatives et actuarielles
 
 ### 12.1 Sensibilité locale
