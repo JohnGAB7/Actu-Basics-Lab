@@ -33,6 +33,8 @@ Ce dossier fait passer les huit cours de fondation vers une pratique plus univer
 | [Exercices corrigés — suites et séries](EXERCICES-SUITES-SERIES.md) | 20 exercices progressifs avec solutions détaillées |
 | [Topologie élémentaire de R](TOPOLOGIE-ELEMENTAIRE-R.md) | Ouverts, fermés, adhérence, compacité, connexité et continuité |
 | [Exercices corrigés — topologie de R](EXERCICES-TOPOLOGIE-R.md) | 20 exercices avec preuves et contre-exemples |
+| [Limites de fonctions et continuité](LIMITES-FONCTIONS-CONTINUITE.md) | Epsilon-delta, limites latérales, caractérisation séquentielle, continuité, TVI, extrema et continuité uniforme |
+| [Exercices corrigés — limites et continuité](EXERCICES-LIMITES-CONTINUITE.md) | 20 exercices progressifs avec preuves et corrigés détaillés |
 
 ## Modalités de travail recommandées
 
@@ -48,7 +50,7 @@ La passerelle est une extension préparatoire du Bloc 1, et non l'ouverture du B
 
 Un second dossier approfondit maintenant la complétude de R : supremum, infimum, propriété archimédienne, densité de Q, intervalles emboîtés et suites de Cauchy. Il explicite pourquoi les propriétés de convergence dépendent de l'ensemble numérique dans lequel on travaille.
 
-Ordre conseillé : lire les cours, refaire les démonstrations à la main, résoudre les exercices sans consulter les corrigés, puis vérifier les hypothèses et les preuves. Les dérivées et intégrales restent hors périmètre.
+Ordre conseillé : lire les cours, refaire les démonstrations à la main, résoudre les exercices sans consulter les corrigés, puis vérifier les hypothèses et les preuves. La nouvelle étude sur les limites et la continuité approfondit les notions évoquées dans la passerelle : epsilon-delta, limites latérales, caractérisation séquentielle, discontinuités, TVI, extrema et continuité uniforme. Les dérivées et intégrales restent hors périmètre.
 
 ## Vérification numérique
 
